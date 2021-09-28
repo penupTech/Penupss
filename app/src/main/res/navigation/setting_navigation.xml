@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/setting_navigation"
+    android:id="@+id/setting_navigation">
+
+    <fragment
+        android:id="@+id/setting_navigation"
+        android:name="com.penup.fragment.BusinessToolsFragment"
+        tools:layout="@layout/fragment_business_tools">
+
+    </fragment>
+
+</navigation>

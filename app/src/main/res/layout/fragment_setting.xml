@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/Setting_color"
+        tools:context=".fragment.SettingFragment">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/Padding_Size_24"
+            android:layout_height="@dimen/Padding_Size_24"
+            android:src="@drawable/ic_back"
+            android:visibility="gone"
+            android:layout_marginStart="@dimen/Padding_Size_16"
+            app:layout_constraintBottom_toBottomOf="@+id/tvSettings"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvSettings" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/Padding_Size_16"
+            android:layout_marginVertical="@dimen/Padding_Size_12"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:text="Settings"
+            android:textColor="@color/black"
+            android:textSize="@dimen/Size_Sp_20"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvCard1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/Padding_Size_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSettings">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/Padding_Size_16">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivUserProfile"
+                    android:layout_width="@dimen/Padding_Size_50"
+                    android:layout_height="@dimen/Padding_Size_50"
+                    android:layout_gravity="left|center"
+                    android:src="@drawable/ic_user_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center|left"
+                    android:text="Paytel"
+
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/Size_Sp_18"
+                    app:layout_constraintStart_toEndOf="@+id/ivUserProfile"
+                    app:layout_constraintTop_toTopOf="@+id/ivUserProfile" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvMSG"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                    android:layout_marginVertical="@dimen/Padding_Size_4"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center|left"
+                    android:text="Hey there! I am using WhatsApp"
+                    android:textColor="@color/msg_new"
+                    android:textSize="@dimen/Size_Sp_14"
+                    app:layout_constraintStart_toEndOf="@+id/ivUserProfile"
+                    app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/qr"
+                    android:layout_width="@dimen/Padding_Size_32"
+                    android:layout_height="@dimen/Padding_Size_32"
+                    android:layout_gravity="left|center"
+                    android:src="@drawable/ic_qr"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvCard2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/Padding_Size_20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvCard1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutBuisiness"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                    android:layout_marginVertical="@dimen/Padding_Size_8"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivBusiness"
+                        android:layout_width="@dimen/Padding_Size_40"
+                        android:layout_height="@dimen/Padding_Size_40"
+                        android:layout_gravity="left|center"
+
+                        android:src="@drawable/ic_business_tool"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvBusiness"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center|left"
+                        android:text="Business Tools"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/Size_Sp_14"
+                        app:layout_constraintStart_toEndOf="@+id/ivBusiness"
+                        app:layout_constraintTop_toTopOf="@+id/ivBusiness" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvMsg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|left"
+                        android:text="Profile, Catalogue, messaging tools"
+                        android:textColor="@color/msg_color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivBusiness"
+                        app:layout_constraintStart_toEndOf="@+id/ivBusiness"
+                        app:layout_constraintTop_toBottomOf="@+id/tvBusiness" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivForward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|left"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                        android:text="5:22 pm"
+                        android:textColor="@color/msg_color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        android:tint="@color/light_purple"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_marginStart="@dimen/Padding_Size_50"
+                        android:layout_marginTop="3dp"
+                        android:background="@color/gray"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivBusiness"
+                        app:layout_constraintTop_toBottomOf="@+id/ivBusiness" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                    android:layout_marginVertical="@dimen/Padding_Size_8"
+                    app:layout_constraintTop_toBottomOf="@+id/layoutBuisiness">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivAccount"
+                        android:layout_width="@dimen/Padding_Size_40"
+                        android:layout_height="@dimen/Padding_Size_40"
+                        android:layout_gravity="left|center"
+
+                        android:src="@drawable/ic_account"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAccount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center|left"
+                        android:text="Account"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/Size_Sp_14"
+                        app:layout_constraintStart_toEndOf="@+id/ivAccount"
+                        app:layout_constraintTop_toTopOf="@+id/ivAccount" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAccountMsg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|left"
+                        android:text="Privacy, Security, Change Number"
+                        android:textColor="@color/msg_color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivAccount"
+                        app:layout_constraintStart_toEndOf="@+id/ivAccount"
+                        app:layout_constraintTop_toBottomOf="@+id/tvAccount" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivAccountForward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|left"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                        android:text="5:22 pm"
+                        android:textColor="@color/msg_color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        android:tint="@color/light_purple"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_marginStart="@dimen/Padding_Size_50"
+                        android:layout_marginTop="3dp"
+                        android:background="@color/gray"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivAccount"
+                        app:layout_constraintTop_toBottomOf="@+id/ivAccount" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutLink"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                    android:layout_marginVertical="@dimen/Padding_Size_8"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layoutAccount"
+                    tools:layout_editor_absoluteX="16dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivLink"
+                        android:layout_width="@dimen/Padding_Size_40"
+                        android:layout_height="@dimen/Padding_Size_40"
+                        android:layout_gravity="left|center"
+
+                        android:src="@drawable/ic_link_device"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvLink"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center|left"
+                        android:text="Linked device"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/Size_Sp_14"
+                        app:layout_constraintStart_toEndOf="@+id/ivLink"
+                        app:layout_constraintTop_toTopOf="@+id/ivLink" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvLinkMsg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|left"
+                        android:text="All linked devices"
+                        android:textColor="@color/msg_color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivLink"
+                        app:layout_constraintStart_toEndOf="@+id/ivLink"
+                        app:layout_constraintTop_toBottomOf="@+id/tvLink" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivLinkForward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|left"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                        android:text="5:22 pm"
+                        android:textColor="@color/msg_color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        android:tint="@color/light_purple"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_marginStart="@dimen/Padding_Size_50"
+                        android:background="@color/gray"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivLink"
+                        app:layout_constraintTop_toBottomOf="@+id/ivLink" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvCard3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/Padding_Size_10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvCard2">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutChat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                    android:layout_marginVertical="@dimen/Padding_Size_4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivChat"
+                        android:layout_width="@dimen/Padding_Size_40"
+                        android:layout_height="@dimen/Padding_Size_40"
+                        android:layout_gravity="left|center"
+
+                        android:src="@drawable/ic_chats_msg"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvChat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center|left"
+                        android:text="Chats"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/Size_Sp_14"
+                        app:layout_constraintStart_toEndOf="@+id/ivChat"
+                        app:layout_constraintTop_toTopOf="@+id/ivChat" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvChatMsg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|left"
+                        android:text="Theme wallpaper, chat history"
+                        android:textColor="@color/msg_color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivChat"
+                        app:layout_constraintStart_toEndOf="@+id/ivChat"
+                        app:layout_constraintTop_toBottomOf="@+id/tvChat" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivChatForward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|left"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                        android:text="5:22 pm"
+                        android:textColor="@color/msg_color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        android:tint="@color/light_purple"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+android:layout_marginTop="3dp"                        android:layout_marginStart="@dimen/Padding_Size_50"
+                        android:background="@color/gray"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivChat"
+                        app:layout_constraintTop_toBottomOf="@+id/ivChat" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutNotification"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                    android:layout_marginVertical="@dimen/Padding_Size_8"
+                    app:layout_constraintTop_toBottomOf="@+id/layoutChat">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivNotification"
+                        android:layout_width="@dimen/Padding_Size_40"
+                        android:layout_height="@dimen/Padding_Size_40"
+                        android:layout_gravity="left|center"
+
+                        android:src="@drawable/ic_notification"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvNotification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center|left"
+                        android:text="Notifications"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/Size_Sp_14"
+                        app:layout_constraintStart_toEndOf="@+id/ivNotification"
+                        app:layout_constraintTop_toTopOf="@+id/ivNotification" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvNotificationMsg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|left"
+                        android:text="Message, group &amp; call tones"
+                        android:textColor="@color/msg_color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivNotification"
+                        app:layout_constraintStart_toEndOf="@+id/ivNotification"
+                        app:layout_constraintTop_toBottomOf="@+id/tvNotification" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivNotificationForward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|left"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                        android:text="5:22 pm"
+                        android:textColor="@color/msg_color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        android:tint="@color/light_purple"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+android:layout_marginTop="3dp"                        android:layout_marginStart="@dimen/Padding_Size_50"
+                        android:background="@color/gray"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivNotification"
+                        app:layout_constraintTop_toBottomOf="@+id/ivNotification" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutStorage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                    android:layout_marginVertical="@dimen/Padding_Size_8"
+                    app:layout_constraintTop_toBottomOf="@+id/layoutNotification"
+                    tools:layout_editor_absoluteX="16dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivStorage"
+                        android:layout_width="@dimen/Padding_Size_40"
+                        android:layout_height="@dimen/Padding_Size_40"
+                        android:layout_gravity="left|center"
+
+                        android:src="@drawable/ic_storage"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvStorage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center|left"
+                        android:text="Storage &amp; Data"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/Size_Sp_14"
+                        app:layout_constraintStart_toEndOf="@+id/ivStorage"
+                        app:layout_constraintTop_toTopOf="@+id/ivStorage" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvStorageMsg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|left"
+                        android:text="Network usage &amp; auto-download"
+                        android:textColor="@color/msg_color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivStorage"
+                        app:layout_constraintStart_toEndOf="@+id/ivStorage"
+                        app:layout_constraintTop_toBottomOf="@+id/tvStorage" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivStorageForward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|left"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                        android:text="5:22 pm"
+                        android:textColor="@color/msg_color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        android:tint="@color/light_purple"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_marginStart="@dimen/Padding_Size_50"
+                        android:background="@color/gray"
+                       android:layout_marginTop="3dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivStorage"
+                        app:layout_constraintTop_toBottomOf="@+id/ivStorage" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutHelp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                    android:layout_marginVertical="@dimen/Padding_Size_8"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layoutStorage"
+                    tools:layout_editor_absoluteX="16dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivHelp"
+                        android:layout_width="@dimen/Padding_Size_40"
+                        android:layout_height="@dimen/Padding_Size_40"
+                        android:layout_gravity="left|center"
+
+                        android:src="@drawable/ic_help"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvHelp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center|left"
+                        android:text="Help"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/Size_Sp_14"
+                        app:layout_constraintStart_toEndOf="@+id/ivHelp"
+                        app:layout_constraintTop_toTopOf="@+id/ivHelp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvHelpMsg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|left"
+                        android:text="Help center, contact us, privacy policy"
+                        android:textColor="@color/msg_color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivHelp"
+                        app:layout_constraintStart_toEndOf="@+id/ivHelp"
+                        app:layout_constraintTop_toBottomOf="@+id/tvHelp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivHelpForward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|left"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                        android:text="5:22 pm"
+                        android:textColor="@color/msg_color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        android:tint="@color/light_purple"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_marginStart="@dimen/Padding_Size_50"
+                        android:background="@color/gray"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivHelp"
+                        app:layout_constraintTop_toBottomOf="@+id/ivHelp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutInvite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/Padding_Size_16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvCard3">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivInvite"
+                android:layout_width="@dimen/Padding_Size_40"
+                android:layout_height="@dimen/Padding_Size_40"
+                android:layout_gravity="left|center"
+                android:src="@drawable/ic_invite"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvInvite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center|left"
+                android:text="Invite a contact"
+                android:textColor="@color/black"
+                android:textSize="@dimen/Size_Sp_14"
+                app:layout_constraintBottom_toBottomOf="@+id/ivInvite"
+                app:layout_constraintStart_toEndOf="@+id/ivInvite"
+                app:layout_constraintTop_toTopOf="@+id/ivInvite" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/Padding_Size_16"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center|left"
+            android:text="From"
+            android:textColor="#BDBDBD"
+            android:textSize="@dimen/Size_Sp_16"
+            app:layout_constraintBottom_toTopOf="@+id/tvPayte"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPayte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/Padding_Size_16"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center|left"
+            android:text="PAYTEL GROUP"
+            android:layout_marginVertical="@dimen/Padding_Size_24"
+            android:textColor="#133E7C"
+            android:textSize="@dimen/Size_Sp_18"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

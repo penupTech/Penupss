@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/Setting_color"
+        tools:context=".fragment.AccountFragment">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvCard1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="@dimen/Padding_Size_24"
+                    android:layout_height="@dimen/Padding_Size_24"
+                    android:layout_margin="@dimen/Padding_Size_16"
+                    android:src="@drawable/ic_back"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvSettings"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvSettings" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSettings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                    android:layout_marginVertical="@dimen/Padding_Size_12"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+                    android:text="Settings"
+                    android:textColor="@color/light_purple"
+                    android:textSize="@dimen/Size_Sp_16"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivBack"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                    android:layout_marginVertical="@dimen/Padding_Size_12"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="Account"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/Size_Sp_20"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/ivBack"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvCard2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/Padding_Size_40"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvCard1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutPrivacy"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                    android:layout_marginVertical="@dimen/Padding_Size_8"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvPrivacy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/Padding_Size_8"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center|left"
+                        android:text="Privacy"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/Size_Sp_14"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivForward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|left"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                        android:text="5:22 pm"
+                        android:textColor="@color/msg_color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        android:tint="@color/light_purple"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.2dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@color/gray"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutSecurity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                    android:layout_marginVertical="@dimen/Padding_Size_8"
+                    app:layout_constraintTop_toBottomOf="@+id/layoutPrivacy">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvSecurity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/Padding_Size_8"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center|left"
+                        android:text="Security"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/Size_Sp_14"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivSecurityForward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|left"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                        android:text="5:22 pm"
+                        android:textColor="@color/msg_color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        android:tint="@color/light_purple"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@color/gray"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutVerification"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                    android:layout_marginVertical="@dimen/Padding_Size_8"
+                    app:layout_constraintTop_toBottomOf="@+id/layoutSecurity"
+                    tools:layout_editor_absoluteX="16dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvVerification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/Padding_Size_8"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center|left"
+                        android:text="Two-Step Verification"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/Size_Sp_14"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivVerificationForward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|left"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                        android:text="5:22 pm"
+                        android:textColor="@color/msg_color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        android:tint="@color/light_purple"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.2dp"
+                        android:background="@color/gray"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutChange"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                    android:layout_marginVertical="@dimen/Padding_Size_8"
+                    app:layout_constraintTop_toBottomOf="@+id/layoutVerification"
+                    tools:layout_editor_absoluteX="16dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvChangeNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/Padding_Size_8"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center|left"
+                        android:text="Change Number"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/Size_Sp_14"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivChangeForward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|left"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                        android:text="5:22 pm"
+                        android:textColor="@color/msg_color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        android:tint="@color/light_purple"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.2dp"
+                        android:background="@color/gray"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvCard3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/Padding_Size_60"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvCard2">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutRequestInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                    android:layout_marginVertical="@dimen/Padding_Size_8"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvRequestInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/Padding_Size_8"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center|left"
+                        android:text="Request Account info"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/Size_Sp_14"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivRequestForward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|left"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                        android:text="5:22 pm"
+                        android:textColor="@color/msg_color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        android:tint="@color/light_purple"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.2dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@color/gray"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutDelete"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                    android:layout_marginVertical="@dimen/Padding_Size_8"
+                    app:layout_constraintTop_toBottomOf="@+id/layoutRequestInfo">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDelete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/Padding_Size_8"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center|left"
+                        android:text="Delete My Account"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/Size_Sp_14"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivDeleteForward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|left"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                        android:text="5:22 pm"
+                        android:textColor="@color/msg_color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        android:tint="@color/light_purple"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_marginTop="3dp"
+                        android:visibility="gone"
+                        android:background="@color/gray"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

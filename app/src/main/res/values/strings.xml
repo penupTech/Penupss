@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">PenUp</string>
+
+
+    <string name="welcome">Welcome to PENUP</string>
+    <string name="PhoneNumber">Your Phone Number</string>
+    <string name="Profile">Set Your Profile</string>
+    <string name="done">Done</string>
+    <string name="privacy">Read our <font fgcolor='#8E13D9'>Privacy Policy</font>.Tap “Agree &amp; Continue”\nto accept the<font fgcolor='#8E13D9'>Terms of Service</font></string>
+    <string name="agree"><font fgcolor='#8E13D9'>Agree &amp; Continue</font></string>
+    <string name="confirm">Please confirm your country code and\nenter your phone number</string>
+    <string name="enterName">Enter your name &amp; add an optional\nprofile picture</string>
+
+
+    <string name="status">Status</string>
+    <string name="call">Call</string>
+    <string name="chats">Chats</string>
+    <string name="camera">Camera</string>
+    <string name="setting">Settings</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="PenUp">PENUP APP secures your conversation with end to end encryption. This means your messages, calls and status updates stay between you and the people you choose. Not even PENUP can read or listen to them.<font fgcolor='#8E13D9'> Learn more</font></string>
+    <string name="create">Create a report of your PENUP account information and settings, which you can access or port to another app. This report does not include your messages.<font fgcolor='#8E13D9'> Learn more</font></string>
+
+
+    <string name="getnotification">Get notified when your security code changes\nfor a contact.<font fgcolor='#8E13D9'> Learn more</font></string>
+
+
+    <string-array name="fruits_array">
+        <item>Apples</item>
+        <item>Apricots</item>
+        <item>Avocado</item>
+        <item>Annona</item>
+        <item>Banana</item>
+        <item>Blueberry</item>
+        <item>Blackberry</item>
+        <item>Blackapple</item>
+        <item>Custard Apple</item>
+        <item>Clementine</item>
+        <item>Cantalope</item>
+        <item>Date</item>
+        <item>Elderberry</item>
+        <item>Fig</item>
+        <item>Grapefruit</item>
+        <item>Grape</item>
+        <item>Gooseberry</item>
+        <item>Guava</item>
+        <item>Honeydew melon</item>
+        <item>Jackfruit</item>
+        <item>Juniper Berry</item>
+        <item>Kiwi</item>
+        <item>Kumquat</item>
+        <item>Lemons</item>
+        <item>Limes</item>
+        <item>Lychee</item>
+        <item>Mango</item>
+        <item>Mandarin</item>
+        <item>Nectaraine</item>
+        <item>Orange</item>
+        <item>Olive</item>
+        <item>Prunes</item>
+        <item>Pears</item>
+        <item>Plum</item>
+        <item>Pineapple</item>
+        <item>Peach</item>
+        <item>Papaya</item>
+        <item>Pomelo</item>
+        <item>Raspberries</item>
+        <item>Rambutan</item>
+        <item>Strawberries</item>
+        <item>Sweety</item>
+        <item>Salmonberry</item>
+        <item>Tangerines</item>
+        <item>Tomato</item>
+        <item>Ugli</item>
+        <item>Watermelon</item>
+        <item>Woodapple</item>
+    </string-array>
+</resources>

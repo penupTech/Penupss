@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".WelcomeActivity">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivWelcome"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/Padding_Size_300"
+
+            android:layout_marginHorizontal="@dimen/Padding_Size_16"
+            android:layout_marginVertical="@dimen/Padding_Size_24"
+            android:src="@drawable/ic_welcome"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvWelcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/Padding_Size_16"
+            android:layout_marginVertical="@dimen/Padding_Size_44"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="@string/welcome"
+            android:textColor="@color/black"
+            android:textSize="@dimen/Size_Sp_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivWelcome" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPrivacy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/Padding_Size_16"
+            android:layout_marginVertical="@dimen/Padding_Size_16"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:text="@string/privacy"
+            android:textColor="@color/black"
+            android:textSize="@dimen/Size_Sp_12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvWelcome" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAgree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/Padding_Size_16"
+            android:layout_marginVertical="@dimen/Padding_Size_16"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="@string/agree"
+            android:textColor="@color/black"
+            android:textSize="@dimen/Size_Sp_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPrivacy" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

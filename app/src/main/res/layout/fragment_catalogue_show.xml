@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragment.CatalogueShowFragment">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cvCard1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/Padding_Size_24"
+                android:layout_height="@dimen/Padding_Size_24"
+                android:layout_margin="@dimen/Padding_Size_16"
+                android:src="@drawable/ic_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                android:layout_marginVertical="@dimen/Padding_Size_12"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="Catalogue Manager"
+                android:textColor="@color/black"
+                android:textSize="@dimen/Size_Sp_18"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivAddCart"
+                android:layout_width="@dimen/Padding_Size_24"
+                android:layout_height="@dimen/Padding_Size_24"
+                android:layout_margin="@dimen/Padding_Size_16"
+                android:src="@drawable/ic_card"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                app:layout_constraintEnd_toStartOf="@+id/ivMenu"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivMenu"
+                android:layout_width="@dimen/Padding_Size_24"
+                android:layout_height="@dimen/Padding_Size_24"
+                android:layout_margin="@dimen/Padding_Size_16"
+                android:src="@drawable/ic_menuicon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvCard1">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivItemImage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/Padding_Size_250"
+                android:background="@drawable/cacke"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvItemText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                android:layout_marginVertical="@dimen/Padding_Size_12"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="Create a Catalogue"
+                android:textColor="@color/black"
+                android:textSize="@dimen/Size_Sp_24"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivItemImage" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                android:fontFamily="@font/roboto"
+                android:gravity="center|left"
+                android:text="Send products &amp; services to your customers and save space on your phone"
+                android:textColor="@color/black"
+                android:textSize="@dimen/Size_Sp_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvItemText" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivAdd"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="@dimen/Size_Sp_16"
+                android:background="@drawable/ic_items"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvHint">
+
+            </androidx.appcompat.widget.AppCompatImageView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                android:layout_marginVertical="@dimen/Padding_Size_12"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="Add new Item"
+                android:textColor="#C4C4C4"
+                android:textSize="@dimen/Size_Sp_24"
+
+                app:layout_constraintBottom_toBottomOf="@+id/ivAdd"
+                app:layout_constraintStart_toEndOf="@+id/ivAdd"
+                app:layout_constraintTop_toTopOf="@+id/ivAdd" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCk"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="@dimen/Size_Sp_16"
+                android:background="@drawable/cacke"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivAdd"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCake"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                android:layout_marginVertical="@dimen/Padding_Size_12"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:text="Cake"
+                android:layout_marginTop="@dimen/Padding_Size_8"
+                android:textColor="@color/black"
+                android:textSize="@dimen/Size_Sp_24"
+                app:layout_constraintStart_toEndOf="@+id/ivCk"
+                app:layout_constraintTop_toTopOf="@+id/ivCk" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="₹ 12.00"
+                android:textColor="@color/black"
+                android:textSize="@dimen/Size_Sp_16"
+                app:layout_constraintStart_toEndOf="@+id/ivCk"
+                app:layout_constraintTop_toBottomOf="@+id/tvCake" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

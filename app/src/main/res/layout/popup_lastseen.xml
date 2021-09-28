@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/Padding_Size_300"
+    android:background="@drawable/btnmsgw"
+    android:layout_gravity="center|top"
+    android:layout_height="@dimen/Padding_Size_200">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        android:layout_marginHorizontal="@dimen/Padding_Size_32"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Last seen"
+        android:textColor="@color/black"
+        android:textSize="@dimen/Size_Sp_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvText">
+
+        <RadioButton
+            android:id="@+id/radioEveryone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/Padding_Size_40"
+            android:layout_marginHorizontal="@dimen/Padding_Size_32"
+            android:layout_marginTop="@dimen/Padding_Size_16"
+            android:text="Everyone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvText" />
+
+        <RadioButton
+            android:id="@+id/radioMyContacts"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/Padding_Size_40"
+            android:layout_marginHorizontal="@dimen/Padding_Size_32"
+            android:text="My Contacts"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioEveryone" />
+
+        <RadioButton
+            android:id="@+id/radioNobody"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/Padding_Size_40"
+            android:layout_marginHorizontal="32dp"
+            android:text="Nobody"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioMyContacts" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

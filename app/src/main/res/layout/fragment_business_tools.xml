@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragment.BusinessToolsFragment">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvCard1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="@dimen/Padding_Size_24"
+                    android:layout_height="@dimen/Padding_Size_24"
+                    android:layout_marginStart="@dimen/Padding_Size_16"
+                    android:src="@drawable/ic_back"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvBusiess"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvBusiess" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvBusiess"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                    android:layout_marginVertical="@dimen/Padding_Size_16"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="Business Tools"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/Size_Sp_20"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvCard1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/layoutBusinessProfile"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                            android:layout_marginVertical="@dimen/Padding_Size_8"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:layout_editor_absoluteX="16dp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivBProfile"
+                                android:layout_width="@dimen/Padding_Size_32"
+                                android:layout_height="@dimen/Padding_Size_32"
+                                android:layout_gravity="left|center"
+                                android:tint="@color/light_purple"
+                                android:src="@drawable/ic_baseline_home_24"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvBProfile"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                                android:fontFamily="@font/roboto_medium"
+                                android:gravity="center|left"
+                                android:text="Business Profile"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/Size_Sp_14"
+                                app:layout_constraintStart_toEndOf="@+id/ivBProfile"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvBMSG"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                                android:fontFamily="@font/roboto"
+                                android:gravity="center|left"
+                                android:text="Manage address, hours and website"
+                                android:textColor="@color/msg_color"
+                                android:textSize="@dimen/Size_Sp_12"
+
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/ivBProfile"
+                                app:layout_constraintTop_toBottomOf="@+id/tvBProfile" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/layoutCatalogue"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                            android:layout_marginVertical="@dimen/Padding_Size_24"
+                            app:layout_constraintTop_toBottomOf="@id/layoutBusinessProfile">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivCatalogue"
+                                android:layout_width="@dimen/Padding_Size_32"
+                                android:layout_height="@dimen/Padding_Size_32"
+                                android:layout_gravity="left|center"
+                                android:tint="@color/light_purple"
+                                android:src="@drawable/ic_baseline_apps_24"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvCatalogue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                                android:fontFamily="@font/roboto_medium"
+                                android:gravity="center|left"
+                                android:text="Catalogue"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/Size_Sp_14"
+                                app:layout_constraintStart_toEndOf="@+id/ivCatalogue"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvCMSG"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                                android:fontFamily="@font/roboto"
+                                android:gravity="center|left"
+                                android:text="show products and services"
+                                android:textColor="@color/msg_color"
+                                android:textSize="@dimen/Size_Sp_12"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/ivCatalogue"
+                                app:layout_constraintTop_toBottomOf="@+id/tvCatalogue" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <View
+                            android:id="@+id/view1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.3dp"
+                            android:layout_marginHorizontal="@dimen/Padding_Size_8"
+                            android:layout_marginVertical="@dimen/Padding_Size_16"
+                            android:background="@color/gray"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/layoutCatalogue" />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvMessaging"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                            android:layout_marginVertical="@dimen/Padding_Size_16"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="center"
+                            android:text="Messaging"
+                            android:textColor="@color/light_purple"
+                            android:textSize="@dimen/Size_Sp_12"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/layoutMessages"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                            android:layout_marginVertical="@dimen/Padding_Size_24"
+                            app:layout_constraintTop_toBottomOf="@id/tvMessaging">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivMessages"
+                                android:layout_width="@dimen/Padding_Size_32"
+                                android:layout_height="@dimen/Padding_Size_32"
+                                android:layout_gravity="left|center"
+                                android:src="@drawable/ic_umbrella"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvMessages"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                                android:fontFamily="@font/roboto_medium"
+                                android:gravity="center|left"
+                                android:text="Away Messages"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/Size_Sp_14"
+                                app:layout_constraintStart_toEndOf="@+id/ivMessages"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvMessagesMSG"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                                android:fontFamily="@font/roboto"
+                                android:gravity="center|left"
+                                android:text="Reply automatically when you are away"
+                                android:textColor="@color/msg_color"
+                                android:textSize="@dimen/Size_Sp_12"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/ivMessages"
+                                app:layout_constraintTop_toBottomOf="@+id/tvMessages" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/layoutGetMessages"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                            android:layout_marginVertical="@dimen/Padding_Size_24"
+                            app:layout_constraintTop_toBottomOf="@id/layoutMessages">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivGetMessages"
+                                android:layout_width="@dimen/Padding_Size_32"
+                                android:layout_height="@dimen/Padding_Size_32"
+                                android:layout_gravity="left|center"
+                                android:tint="@color/light_purple"
+                                android:src="@drawable/ic_baseline_message_24"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvGetMessages"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                                android:fontFamily="@font/roboto_medium"
+                                android:gravity="center|left"
+                                android:text="Getting Messages"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/Size_Sp_14"
+                                app:layout_constraintStart_toEndOf="@+id/ivGetMessages"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvGetMessagesMSG"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                                android:fontFamily="@font/roboto"
+                                android:gravity="center|left"
+                                android:text="\Welcome new customers automatically"
+                                android:textColor="@color/msg_color"
+                                android:textSize="@dimen/Size_Sp_12"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/ivGetMessages"
+                                app:layout_constraintTop_toBottomOf="@+id/tvGetMessages" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/layoutQuick"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                            android:layout_marginVertical="@dimen/Padding_Size_24"
+                            app:layout_constraintTop_toBottomOf="@id/layoutGetMessages">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivQuick"
+                                android:layout_width="@dimen/Padding_Size_32"
+                                android:layout_height="@dimen/Padding_Size_32"
+                                android:layout_gravity="left|center"
+                                android:tint="@color/light_purple"
+                                android:src="@drawable/ic_baseline_quickreply_24"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvQuick"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                                android:fontFamily="@font/roboto_medium"
+                                android:gravity="center|left"
+                                android:text="Quick reply"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/Size_Sp_14"
+                                app:layout_constraintStart_toEndOf="@+id/ivQuick"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvQuickMSG"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                                android:fontFamily="@font/roboto"
+                                android:gravity="center|left"
+                                android:text="show product and services"
+                                android:textColor="@color/msg_color"
+                                android:textSize="@dimen/Size_Sp_12"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/ivQuick"
+                                app:layout_constraintTop_toBottomOf="@+id/tvQuick" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/layoutLabels"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                            android:layout_marginVertical="@dimen/Padding_Size_24"
+                            app:layout_constraintTop_toBottomOf="@id/layoutQuick">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivLabels"
+                                android:layout_width="@dimen/Padding_Size_32"
+                                android:layout_height="@dimen/Padding_Size_32"
+                                android:layout_gravity="left|center"
+                                android:tint="@color/light_purple"
+                                android:src="@drawable/ic_baseline_label_24"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvLabels"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                                android:fontFamily="@font/roboto_medium"
+                                android:gravity="center|left"
+                                android:text="Labels"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/Size_Sp_14"
+                                app:layout_constraintStart_toEndOf="@+id/ivLabels"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvLabelsMSG"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                                android:fontFamily="@font/roboto"
+                                android:gravity="center|left"
+                                android:text="Organise chats and customers"
+                                android:textColor="@color/msg_color"
+                                android:textSize="@dimen/Size_Sp_12"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/ivLabels"
+                                app:layout_constraintTop_toBottomOf="@+id/tvLabels" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <View
+                            android:id="@+id/view2"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.3dp"
+                            android:layout_marginHorizontal="@dimen/Padding_Size_8"
+                            android:layout_marginVertical="@dimen/Padding_Size_16"
+                            android:background="@color/gray"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/layoutLabels" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvReachCustomers"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                            android:layout_marginVertical="@dimen/Padding_Size_16"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="center"
+                            android:text="Reach for customers"
+                            android:textColor="@color/light_purple"
+                            android:textSize="@dimen/Size_Sp_12"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/layoutShareLink"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                            android:layout_marginVertical="@dimen/Padding_Size_24"
+                            app:layout_constraintTop_toBottomOf="@id/tvReachCustomers">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivShareLink"
+                                android:layout_width="@dimen/Padding_Size_32"
+                                android:layout_height="@dimen/Padding_Size_32"
+                                android:layout_gravity="left|center"
+                                android:tint="@color/light_purple"
+                                android:paddingVertical="@dimen/Padding_Size_4"
+                                android:src="@drawable/ic_baseline_share_24"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvShareLink"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                                android:fontFamily="@font/roboto_medium"
+                                android:gravity="center|left"
+                                android:text="Shatre link"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/Size_Sp_14"
+                                app:layout_constraintStart_toEndOf="@+id/ivShareLink"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvShareLinkMSG"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                                android:fontFamily="@font/roboto"
+                                android:gravity="center|left"
+                                android:text="invite to chats and customers and customers"
+                                android:textColor="@color/msg_color"
+                                android:textSize="@dimen/Size_Sp_12"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/ivShareLink"
+                                app:layout_constraintTop_toBottomOf="@+id/tvShareLink" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/layoutFbAbdInsta"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                            android:layout_marginVertical="@dimen/Padding_Size_24"
+                            app:layout_constraintTop_toBottomOf="@id/layoutShareLink">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivFbAbdInsta"
+                                android:layout_width="@dimen/Padding_Size_32"
+                                android:layout_height="@dimen/Padding_Size_32"
+                                android:layout_gravity="left|center"
+                                android:tint="@color/light_purple"
+                                android:src="@drawable/ic_baseline_insert_link_24"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvFbAbdInsta"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                                android:fontFamily="@font/roboto_medium"
+                                android:gravity="center|left"
+                                android:text="Facebook &amp; Instagram"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/Size_Sp_14"
+                                app:layout_constraintStart_toEndOf="@+id/ivFbAbdInsta"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvFbAbdInstaMSG"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                                android:fontFamily="@font/roboto"
+                                android:gravity="center|left"
+                                android:text="Add WhatsApp to your account"
+                                android:textColor="@color/msg_color"
+                                android:textSize="@dimen/Size_Sp_12"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/ivFbAbdInsta"
+                                app:layout_constraintTop_toBottomOf="@+id/tvFbAbdInsta" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

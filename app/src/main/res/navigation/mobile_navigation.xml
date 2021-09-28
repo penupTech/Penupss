@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_chats">
+
+    <fragment
+        android:id="@+id/nav_status"
+        android:name="com.penup.fragment.StatusFragment"
+        tools:layout="@layout/fragment_status">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_call"
+        android:name="com.penup.fragment.CallFragment"
+        tools:layout="@layout/fragment_call">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_camera"
+        android:name="com.penup.fragment.CameraFragment"
+        tools:layout="@layout/fragment_camera">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_chats"
+        android:name="com.penup.fragment.ChatsFragment"
+        tools:layout="@layout/fragment_chats">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.penup.fragment.SettingFragment"
+        tools:layout="@layout/fragment_setting">
+<!--        <action-->
+<!--            android:id="@+id/action_nav_settings_to_nav_businesstool"-->
+<!--            app:destination="@id/setting_navigation" />-->
+        <action
+            android:id="@+id/action_nav_settings_to_setting_navigation"
+            app:destination="@id/setting_navigation" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/setting_navigation"
+        android:name="com.penup.fragment.BusinessToolsFragment"
+        tools:layout="@layout/fragment_business_tools">
+
+    </fragment>
+
+<!--    <navigation-->
+<!--        android:id="@+id/setting_navigation"-->
+<!--        app:startDestination="@id/setting_navigation">-->
+
+<!--        <fragment-->
+<!--            android:id="@+id/setting_navigation"-->
+<!--            android:name="com.penup.fragment.BusinessToolsFragment"-->
+<!--            tools:layout="@layout/fragment_business_tools">-->
+
+<!--        </fragment>-->
+<!--    </navigation>-->
+<!--        <include app:graph="@navigation/setting_navigation" />-->
+
+</navigation>

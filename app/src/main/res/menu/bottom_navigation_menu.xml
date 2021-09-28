@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_status"
+        android:enabled="true"
+        android:icon="@drawable/ic_status"
+        android:iconTint="@color/white"
+        android:title="@string/status"/>
+    <item
+        android:id="@+id/nav_call"
+        android:enabled="true"
+        android:iconTint="@color/white"
+        android:icon="@drawable/ic_call"
+        android:title="@string/call"/>
+    <item
+        android:id="@+id/nav_camera"
+        android:enabled="true"
+        android:iconTint="@color/white"
+        android:icon="@drawable/ic_camera"
+        android:title="@string/camera"/>
+    <item
+        android:id="@+id/nav_chats"
+        android:enabled="true"
+        android:iconTint="@color/white"
+        android:icon="@drawable/ic_msg"
+        android:title="@string/chats"/>
+    <item
+        android:id="@+id/nav_settings"
+        android:enabled="true"
+        android:iconTint="@color/white"
+        android:icon="@drawable/ic_setting"
+        android:title="@string/setting"/>
+</menu>

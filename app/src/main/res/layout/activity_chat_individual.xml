@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FAF6E3"
+        tools:context=".activity.ChatIndividualActivity">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvCard1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="@dimen/Padding_Size_25"
+                    android:layout_height="@dimen/Padding_Size_25"
+                    android:layout_margin="@dimen/Padding_Size_16"
+                    android:src="@drawable/ic_back"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="@dimen/Padding_Size_52"
+                    android:layout_height="@dimen/Padding_Size_52"
+                    android:layout_margin="@dimen/Padding_Size_8"
+                    android:background="@drawable/ic_circle"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivBack"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivUser"
+                        android:layout_width="@dimen/Padding_Size_52"
+                        android:layout_height="@dimen/Padding_Size_52"
+                        android:padding="1dp"
+                        android:src="@drawable/user" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvUnerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/Padding_Size_12"
+                    android:layout_marginVertical="@dimen/Padding_Size_4"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Rahul Singh"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/Padding_Size_16"
+                    app:layout_constraintStart_toEndOf="@+id/linearLayout"
+                    app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvOnline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/Padding_Size_4"
+                    android:fontFamily="@font/roboto"
+                    android:text="Online"
+                    android:textColor="@color/online"
+                    android:textSize="@dimen/Padding_Size_12"
+                    app:layout_constraintStart_toStartOf="@+id/tvUnerName"
+                    app:layout_constraintTop_toBottomOf="@+id/tvUnerName" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivVideoCall"
+                    android:layout_width="@dimen/Padding_Size_32"
+                    android:layout_height="@dimen/Padding_Size_32"
+                    android:layout_margin="@dimen/Padding_Size_16"
+                    android:src="@drawable/ic_videocall"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ivAudioCall"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivAudioCall"
+                    android:layout_width="@dimen/Padding_Size_25"
+                    android:layout_height="@dimen/Padding_Size_25"
+                    android:layout_margin="@dimen/Padding_Size_16"
+                    android:src="@drawable/ic_audiocall"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <FrameLayout
+            android:id="@+id/layoutMain"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/ic_chat"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvCard1"
+            tools:context=".ChattingActivity">
+
+
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
