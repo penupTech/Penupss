@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragment.ChatBackupFragment">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivUpload"
+            android:layout_width="@dimen/Padding_Size_32"
+            android:layout_height="@dimen/Padding_Size_32"
+            android:layout_margin="@dimen/Padding_Size_24"
+            android:src="@drawable/ic_baseline_cloud_upload_24"
+            android:tint="@color/color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLastBAckup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Last Backup"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="@dimen/Padding_Size_16"
+            android:layout_marginStart="@dimen/Padding_Size_24"
+            android:textColor="@color/color"
+            app:layout_constraintBottom_toBottomOf="@+id/ivUpload"
+            app:layout_constraintStart_toEndOf="@+id/ivUpload"
+            app:layout_constraintTop_toTopOf="@+id/ivUpload" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBackup"
+            android:layout_width="@dimen/Padding_Size_300"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/Padding_Size_12"
+            android:text="Back up  your massages and media to Google Drive. You can restore then when you reinstall PenUp. Your messages will also back up to your phone's internal storage"
+            android:fontFamily="@font/roboto"
+            android:textSize="@dimen/Padding_Size_12"
+            android:textColor="@color/color"
+            app:layout_constraintStart_toStartOf="@+id/tvLastBAckup"
+            app:layout_constraintTop_toBottomOf="@+id/tvLastBAckup" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLocal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="Local: 02:00"
+            android:layout_marginTop="@dimen/Padding_Size_32"
+            android:textColor="@color/color"
+            android:textSize="@dimen/Padding_Size_16"
+            app:layout_constraintStart_toStartOf="@+id/tvBackup"
+            app:layout_constraintTop_toBottomOf="@+id/tvBackup" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvGoogle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="Google Drive: Never"
+            android:textColor="@color/color"
+            android:textSize="@dimen/Padding_Size_16"
+            app:layout_constraintStart_toStartOf="@+id/tvBackup"
+            app:layout_constraintTop_toBottomOf="@+id/tvLocal" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBackUp"
+            android:layout_width="@dimen/Padding_Size_100"
+            android:layout_height="@dimen/Padding_Size_52"
+            android:layout_marginTop="@dimen/Padding_Size_32"
+            android:text="BACK UP"
+            android:backgroundTint="@color/missed"
+            android:textSize="@dimen/Size_Sp_14"
+            app:layout_constraintStart_toStartOf="@+id/tvGoogle"
+            app:layout_constraintTop_toBottomOf="@+id/tvGoogle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

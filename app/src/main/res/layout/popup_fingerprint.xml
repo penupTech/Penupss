@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center|top"
+    android:background="@drawable/btnmsgw">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvUnlock"
+        android:layout_width="@dimen/Padding_Size_250"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/Padding_Size_16"
+        android:fontFamily="@font/roboto"
+        android:layout_marginTop="@dimen/Padding_Size_16"
+        android:text="Unlock with fingerprint"
+        android:textColor="@color/xyz"
+        android:textSize="@dimen/Size_Sp_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMsg"
+        android:layout_width="@dimen/Padding_Size_300"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/Padding_Size_8"
+        android:layout_marginHorizontal="@dimen/Padding_Size_16"
+        android:fontFamily="@font/roboto"
+        android:text="When enabled, you'll need to use fingerprint to open PenUp. you can still answer calls if PenUp is locked."
+        android:textColor="@color/xyz"
+        android:textSize="@dimen/Size_Sp_12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvUnlock" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switchMaterial"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/Padding_Size_32"
+        android:layout_marginEnd="@dimen/Padding_Size_16"
+        app:layout_constraintBottom_toBottomOf="@+id/tvUnlock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvUnlock" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/Padding_Size_16"
+        android:fontFamily="@font/roboto"
+        android:layout_marginVertical="@dimen/Padding_Size_16"
+        android:text="Automatically lock"
+        android:textColor="@color/xyz"
+        android:textSize="@dimen/Size_Sp_12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMsg" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLock">
+
+        <RadioButton
+            android:id="@+id/radioEveryone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/Padding_Size_40"
+            android:layout_marginHorizontal="@dimen/Padding_Size_32"
+            android:layout_marginTop="@dimen/Padding_Size_16"
+            android:text="Immediately"
+            android:textColor="@color/xyz"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvGroup" />
+
+        <RadioButton
+            android:id="@+id/radioMyContacts"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/Padding_Size_40"
+            android:layout_marginHorizontal="@dimen/Padding_Size_32"
+            android:text="After 1 minute"
+            android:textColor="@color/xyz"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioEveryone" />
+
+        <RadioButton
+            android:id="@+id/radioNobody"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/Padding_Size_40"
+            android:layout_marginHorizontal="32dp"
+            android:text="After 30 minutes"
+            android:textColor="@color/xyz"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioMyContacts" />
+    </RadioGroup>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/Padding_Size_16"
+        android:layout_marginVertical="@dimen/Padding_Size_16"
+        android:fontFamily="@font/roboto"
+        android:text="Show contenu in notifications"
+        android:textColor="@color/xyz"
+        android:textSize="@dimen/Size_Sp_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPreview"
+        android:layout_width="@dimen/Padding_Size_250"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/Padding_Size_16"
+        android:fontFamily="@font/roboto"
+        android:layout_marginTop="@dimen/Padding_Size_8"
+        android:layout_marginBottom="@dimen/Padding_Size_24"
+        android:text="Preview sender and message text inside new message notification"
+        android:textColor="@color/xyz"
+        android:textSize="@dimen/Size_Sp_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNotification" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/Padding_Size_32"
+        android:layout_marginEnd="@dimen/Padding_Size_16"
+        app:layout_constraintBottom_toBottomOf="@+id/tvNotification"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvNotification" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
