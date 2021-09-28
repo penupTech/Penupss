@@ -36,7 +36,6 @@ public class PrivacyFragment extends Fragment implements View.OnClickListener {
         return binding.getRoot();
     }
 
-
     private void inIt() {
         binding.ivBack.setOnClickListener(this::onClick);
         binding.layoutLastseen.setOnClickListener(this::onClick);
@@ -45,6 +44,7 @@ public class PrivacyFragment extends Fragment implements View.OnClickListener {
         binding.layoutDocument.setOnClickListener(this::onClick);
         binding.layoutGroup.setOnClickListener(this::onClick);
         binding.layoutLocation.setOnClickListener(this::onClick);
+        binding.layoutFinger.setOnClickListener(this::onClick);
 
     }
 
@@ -55,31 +55,38 @@ public class PrivacyFragment extends Fragment implements View.OnClickListener {
                 getActivity().onBackPressed();
                 break;
             case R.id.layoutLastseen:
-                myDialog = PopUpDialog.dialog(getActivity());
+                myDialog = PopUpDialog.lastSeenPopUp(getActivity());
                 PopUpDialog.status.setText("Last Seen");
                 myDialog.show();
                 break;
             case R.id.layoutProfile:
-                myDialog = PopUpDialog.dialog(getActivity());
+                myDialog = PopUpDialog.lastSeenPopUp(getActivity());
                 PopUpDialog.status.setText("Profile Photo");
                 myDialog.show();
 
                 break;
             case R.id.layoutAbout:
-                myDialog = PopUpDialog.dialog(getActivity());
+                myDialog = PopUpDialog.lastSeenPopUp(getActivity());
                 PopUpDialog.status.setText("About");
                 myDialog.show();
                 break;
             case R.id.layoutDocument:
-                showStatusPrivacy();
+                myDialog = PopUpDialog.statusPopUp(getActivity());
+                myDialog.show();
                 break;
             case R.id.layoutGroup:
-                showStatusPrivacy();
-                group.setText("Who can add me to groups");
-                admins.setText("Admins who can't add you to a group will have the option of inviting you privately instead.");
+                myDialog = PopUpDialog.statusPopUp(getActivity());
+                myDialog.show();
+                PopUpDialog.group.setText("Who can add me to groups");
+                PopUpDialog.admins.setText("Admins who can't add you to a group will have the option of inviting you privately instead.");
                 break;
             case R.id.layoutLocation:
-                showLocation();
+                myDialog = PopUpDialog.locationPopUp(getContext());
+                myDialog.show();
+                break;
+            case R.id.layoutFinger:
+                myDialog = PopUpDialog.fingerprintPopUp(getContext());
+                myDialog.show();
                 break;
         }
 
@@ -87,42 +94,5 @@ public class PrivacyFragment extends Fragment implements View.OnClickListener {
 
 
 
-    public void showStatusPrivacy() {
-        final Dialog dialog = new Dialog(getContext());
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialog.setCancelable(true);
-        WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
-        layoutParams.copyFrom(dialog.getWindow().getAttributes());
-        layoutParams.width = WindowManager.LayoutParams.MATCH_PARENT;
-        layoutParams.height = WindowManager.LayoutParams.MATCH_PARENT;
-        dialog.getWindow().setAttributes(layoutParams);
-        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
-        dialog.getWindow().setGravity(Gravity.CENTER_HORIZONTAL);
-        dialog.setContentView(R.layout.popup_status);
-        admins = dialog.findViewById(R.id.tvChange);
-        group = dialog.findViewById(R.id.tvGroup);
-
-
-        dialog.show();
-
-    }
-
-    public void showLocation() {
-        final Dialog dialog = new Dialog(getContext());
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialog.setCancelable(true);
-        WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
-        layoutParams.copyFrom(dialog.getWindow().getAttributes());
-        layoutParams.width = WindowManager.LayoutParams.MATCH_PARENT;
-        layoutParams.height = WindowManager.LayoutParams.MATCH_PARENT;
-        dialog.getWindow().setAttributes(layoutParams);
-        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
-        dialog.getWindow().setGravity(Gravity.CENTER_HORIZONTAL);
-        dialog.setContentView(R.layout.popup_location);
-
-
-        dialog.show();
-
-    }
 
 }

@@ -14,13 +14,11 @@ import com.penup.R;
 
 public class PopUpDialog {
 
-
     public static TextView status, group, admins;
 
 
-    public static Dialog dialog(Context context) {
-     Dialog dialog = new Dialog(context);
-
+    public static Dialog lastSeenPopUp(Context context) {
+        Dialog dialog = new Dialog(context);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setCancelable(true);
         WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
@@ -36,42 +34,58 @@ public class PopUpDialog {
         return dialog;
 
     }
+    public static Dialog locationPopUp(Context context) {
+        Dialog dialog = new Dialog(context);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setCancelable(true);
+        WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
+        layoutParams.copyFrom(dialog.getWindow().getAttributes());
+        layoutParams.width = WindowManager.LayoutParams.MATCH_PARENT;
+        layoutParams.height = WindowManager.LayoutParams.MATCH_PARENT;
+        dialog.getWindow().setAttributes(layoutParams);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+        dialog.getWindow().setGravity(Gravity.CENTER_HORIZONTAL);
+        dialog.setContentView(R.layout.popup_location);
+        dialog.show();
+        return dialog;
 
-//    public void showStatusPrivacy() {
-//        final Dialog dialog = new Dialog();
-//        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-//        dialog.setCancelable(true);
-//        WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
-//        layoutParams.copyFrom(dialog.getWindow().getAttributes());
-//        layoutParams.width = WindowManager.LayoutParams.MATCH_PARENT;
-//        layoutParams.height = WindowManager.LayoutParams.MATCH_PARENT;
-//        dialog.getWindow().setAttributes(layoutParams);
-//        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
-//        dialog.getWindow().setGravity(Gravity.CENTER_HORIZONTAL);
-//        dialog.setContentView(R.layout.popup_status);
-//        admins = dialog.findViewById(R.id.tvChange);
-//        group = dialog.findViewById(R.id.tvGroup);
-//
-//
-//        dialog.show();
-//
-//    }
-//
-//    public void showLocation() {
-//        final Dialog dialog = new Dialog();
-//        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-//        dialog.setCancelable(true);
-//        WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
-//        layoutParams.copyFrom(dialog.getWindow().getAttributes());
-//        layoutParams.width = WindowManager.LayoutParams.MATCH_PARENT;
-//        layoutParams.height = WindowManager.LayoutParams.MATCH_PARENT;
-//        dialog.getWindow().setAttributes(layoutParams);
-//        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
-//        dialog.getWindow().setGravity(Gravity.CENTER_HORIZONTAL);
-//        dialog.setContentView(R.layout.popup_location);
-//
-//
-//        dialog.show();
-//
-//    }
+    }
+
+    public  static Dialog statusPopUp(Context context)  {
+        Dialog dialog = new Dialog(context);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setCancelable(true);
+        WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
+        layoutParams.copyFrom(dialog.getWindow().getAttributes());
+        layoutParams.width = WindowManager.LayoutParams.MATCH_PARENT;
+        layoutParams.height = WindowManager.LayoutParams.MATCH_PARENT;
+        dialog.getWindow().setAttributes(layoutParams);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+        dialog.getWindow().setGravity(Gravity.CENTER_HORIZONTAL);
+        dialog.setContentView(R.layout.popup_status);
+        admins = dialog.findViewById(R.id.tvChange);
+        group = dialog.findViewById(R.id.tvGroup);
+        dialog.show();
+        return dialog;
+    }
+    public  static Dialog fingerprintPopUp(Context context)  {
+        Dialog dialog = new Dialog(context);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setCancelable(true);
+        WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
+        layoutParams.copyFrom(dialog.getWindow().getAttributes());
+        layoutParams.width = WindowManager.LayoutParams.MATCH_PARENT;
+        layoutParams.height = WindowManager.LayoutParams.MATCH_PARENT;
+        dialog.getWindow().setAttributes(layoutParams);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+        dialog.getWindow().setGravity(Gravity.CENTER_HORIZONTAL);
+        dialog.setContentView(R.layout.popup_fingerprint);
+        admins = dialog.findViewById(R.id.tvChange);
+        group = dialog.findViewById(R.id.tvGroup);
+        dialog.show();
+        return dialog;
+    }
+
+
 }
+
