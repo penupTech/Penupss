@@ -11,10 +11,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/Theme.PenUp"
         tools:replace="android:theme">
-        <activity android:name=".activity.ContactsInfoActivity"></activity>
-        <!-- <activity android:name=".activity.IndividualChatActivity"></activity> -->
+        <activity
+            android:name=".activity.CallingActivity"
+            android:exported="true" />
+        <activity android:name=".activity.ContactsInfoActivity" /> <!-- <activity android:name=".activity.IndividualChatActivity"></activity> -->
         <activity android:name=".activity.ChatIndividualActivity" />
         <activity android:name=".activity.ProfileActivity" />
         <activity android:name=".activity.LoginActivity" />
