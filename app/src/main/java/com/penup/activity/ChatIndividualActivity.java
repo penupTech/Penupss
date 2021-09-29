@@ -198,7 +198,6 @@ public class ChatIndividualActivity extends AppCompatActivity implements AudioRe
         dialog.setCancelable(true);
         dialog.getWindow().setGravity(Gravity.CENTER_HORIZONTAL);
         dialog.setContentView(R.layout.user_dialog);
-
         dialog.show();
 
     }

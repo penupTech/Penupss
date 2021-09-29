@@ -13,13 +13,30 @@ import com.penup.R;
 import com.penup.databinding.FragmentCatalogueAddItemsBinding;
 
 
-public class CatalogueAddItemsFragment extends Fragment {
+public class CatalogueAddItemsFragment extends Fragment implements View.OnClickListener {
 FragmentCatalogueAddItemsBinding binding;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding= DataBindingUtil.inflate(inflater,R.layout.fragment_catalogue_add_items, container, false);
+
+
+  inIt();
+
    return binding.getRoot();
+    }
+
+    private void inIt() {
+        binding.ivBack.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.ivBack:
+                getActivity().onBackPressed();
+                break;
+        }
     }
 }

@@ -28,7 +28,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:fontFamily="@font/roboto_medium"
-                android:text="Done"
+                android:text="Edit"
                 android:textColor="#8E13D9"
                 android:textSize="16dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -182,8 +182,8 @@
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/appCompatImageView"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="@dimen/Padding_Size_25"
+                android:layout_height="@dimen/Padding_Size_25"
                 android:layout_marginEnd="16dp"
                 android:src="@drawable/ic_baseline_add_ic_call_24"
                 android:tint="#8E13D9"

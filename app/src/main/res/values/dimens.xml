@@ -26,6 +26,8 @@
     <dimen name="Padding_Size_200">200dp</dimen>
     <dimen name="Padding_Size_250">250dp</dimen>
     <dimen name="Padding_Size_300">300dp</dimen>
+    <dimen name="Padding_Size_14">14sp</dimen>
+    <dimen name="Padding_Size_65">65sp</dimen>
 
     <dimen name="Padding_Size_25">25dp</dimen>
 

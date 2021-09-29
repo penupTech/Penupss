@@ -14,7 +14,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cvCard4"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="90dp"
 
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -113,7 +113,8 @@
                     <View
                         android:id="@+id/view"
                         android:layout_width="match_parent"
-                        android:layout_height="1dp"
+                        android:layout_height="0.2dp"
+                        android:layout_marginTop="@dimen/Padding_Size_12"
                         android:layout_marginStart="70dp"
                         android:background="#E5E5E5"
                         app:layout_constraintTop_toBottomOf="@id/ivuserRecent10" />
