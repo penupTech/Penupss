@@ -24,8 +24,7 @@ public class ChatsFragment extends Fragment implements View.OnClickListener {
     Fragment fragment;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_chats, container, false);
         inIt();
         return binding.getRoot();
@@ -36,7 +35,7 @@ public class ChatsFragment extends Fragment implements View.OnClickListener {
         chatListAdapter = new ChatListAdapter(data, getActivity());
         binding.recyChatList.setAdapter(chatListAdapter);
         binding.ivEdit.setOnClickListener(this::onClick);
-      //  binding.ivU.setOnClickListener(this::onClick);
+        //  binding.ivU.setOnClickListener(this::onClick);
     }
 
     @Override

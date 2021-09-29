@@ -44,8 +44,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        NavController navController = navHostFragment.getNavController();
 //        BottomNavigationView bottomNav = findViewById(R.id.bottom_nav);
 //        NavigationUI.setupWithNavController(bottomNav, navController);
-
-
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener

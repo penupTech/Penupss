@@ -45,7 +45,6 @@ public class ChatIndividualActivity extends AppCompatActivity implements AudioRe
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(ChatIndividualActivity.this, R.layout.activity_chat_individual);
 
-
         inIt();
     }
 
@@ -54,6 +53,8 @@ public class ChatIndividualActivity extends AppCompatActivity implements AudioRe
         binding.ivBack.setOnClickListener(this::onClick);
         binding.ivUser.setOnClickListener(this::onClick);
         binding.tvUnerName.setOnClickListener(this::onClick);
+        binding.ivVideoCall.setOnClickListener(this::onClick);
+        binding.ivAudioCall.setOnClickListener(this::onClick);
 
         audioRecordView = new AudioRecordView();
         audioRecordView.initView((FrameLayout) findViewById(R.id.layoutMain));
@@ -72,14 +73,10 @@ public class ChatIndividualActivity extends AppCompatActivity implements AudioRe
     }
 
 
-
-
-
-
     @Override
     public void onClick(View view) {
 
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.ivUser:
                 showDialog();
                 break;
@@ -87,11 +84,16 @@ public class ChatIndividualActivity extends AppCompatActivity implements AudioRe
                 finish();
                 break;
             case R.id.tvUnerName:
-                startActivity(new Intent(ChatIndividualActivity.this,ContactsInfoActivity.class));
+                startActivity(new Intent(ChatIndividualActivity.this, ContactsInfoActivity.class));
+                break;
+            case R.id.ivVideoCall:
+                startActivity(new Intent(ChatIndividualActivity.this, CallingActivity.class));
+                break;
+            case R.id.ivAudioCall:
+                Toast.makeText(this, "audio", Toast.LENGTH_SHORT).show();
                 break;
         }
     }
-
 
 
     private void setListener() {
@@ -163,7 +165,6 @@ public class ChatIndividualActivity extends AppCompatActivity implements AudioRe
     private void debug(String log) {
         Log.d("VarunJohn", log);
     }
-
 
 
     @Override
