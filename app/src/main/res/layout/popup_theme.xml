@@ -4,89 +4,109 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="350dp"
     android:layout_height="wrap_content"
-    android:layout_gravity="center|top"
-    android:background="@drawable/btnmsgw">
+    android:layout_gravity="center|top">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvGroup"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/Padding_Size_16"
-        android:layout_marginVertical="16dp"
-
-        android:fontFamily="@font/roboto"
-        android:text="Choose theme"
-        android:textColor="@color/xyz"
-        android:textSize="@dimen/Size_Sp_22"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvGroup">
-
-        <RadioButton
-            android:id="@+id/radioSystemDefoult"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/Padding_Size_40"
-            android:layout_marginHorizontal="@dimen/Padding_Size_32"
-android:layout_marginTop="@dimen/Padding_Size_24"
-            android:text="System default"
-            android:textColor="@color/xyz"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvGroup" />
-
-        <RadioButton
-            android:id="@+id/radioLight"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/Padding_Size_40"
-            android:layout_marginHorizontal="@dimen/Padding_Size_32"
-            android:text="Light"
-            android:textColor="@color/xyz"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioEveryone" />
-
-        <RadioButton
-            android:id="@+id/radioDark"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/Padding_Size_40"
-            android:layout_marginHorizontal="32dp"
-            android:text="Dark"
-            android:textColor="@color/xyz"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioMyContacts" />
-    </RadioGroup>
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvCancle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/Padding_Size_40"
-        android:layout_marginVertical="16dp"
-        android:fontFamily="@font/roboto"
-        android:text="CANCEL"
-        android:textColor="@color/missed"
-        android:textSize="@dimen/Size_Sp_16"
-        app:layout_constraintBottom_toBottomOf="@+id/tvOk"
-        app:layout_constraintEnd_toStartOf="@+id/tvOk"
-        app:layout_constraintTop_toTopOf="@+id/tvOk" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvOk"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/Padding_Size_16"
-        android:layout_marginVertical="16dp"
-        android:fontFamily="@font/roboto"
-        android:text="OK"
-        android:textColor="@color/missed"
-        android:textSize="@dimen/Size_Sp_16"
+        android:layout_height="match_parent"
+        app:cardElevation="@dimen/Padding_Size_8"
+        android:layout_margin="@dimen/Padding_Size_8"
+        app:cardCornerRadius="@dimen/Size_Sp_16"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                android:layout_marginVertical="16dp"
+
+                android:fontFamily="@font/roboto_bold"
+                android:text="Choose theme"
+                android:textColor="@color/black"
+                android:textSize="@dimen/Size_Sp_22"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvGroup">
+
+                <RadioButton
+                    android:id="@+id/radioSystemDefoult"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/Padding_Size_40"
+                    android:layout_marginHorizontal="@dimen/Padding_Size_32"
+                    android:layout_marginTop="@dimen/Padding_Size_24"
+                    android:text="System default"
+                    android:textColor="@color/xyz"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvGroup" />
+
+                <RadioButton
+                    android:id="@+id/radioLight"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/Padding_Size_40"
+                    android:layout_marginHorizontal="@dimen/Padding_Size_32"
+                    android:text="Light"
+                    android:textColor="@color/xyz"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/radioEveryone" />
+
+                <RadioButton
+                    android:id="@+id/radioDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/Padding_Size_40"
+                    android:layout_marginHorizontal="32dp"
+                    android:text="Dark"
+                    android:textColor="@color/xyz"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/radioMyContacts" />
+            </RadioGroup>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCancle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/Padding_Size_40"
+                android:layout_marginVertical="16dp"
+                android:fontFamily="@font/roboto"
+                android:text="CANCEL"
+                android:textColor="@color/missed"
+                android:textSize="@dimen/Size_Sp_16"
+                app:layout_constraintBottom_toBottomOf="@+id/tvOk"
+                app:layout_constraintEnd_toStartOf="@+id/tvOk"
+                app:layout_constraintTop_toTopOf="@+id/tvOk" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvOk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                android:layout_marginVertical="16dp"
+                android:fontFamily="@font/roboto"
+                android:text="OK"
+                android:textColor="@color/missed"
+                android:textSize="@dimen/Size_Sp_16"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
