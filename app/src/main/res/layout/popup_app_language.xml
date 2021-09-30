@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center|top"
+    android:background="@drawable/btnmsgw">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLanguage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/Padding_Size_16"
+        android:layout_marginVertical="16dp"
+
+        android:fontFamily="@font/roboto"
+        android:text="Choose theme"
+        android:textColor="@color/xyz"
+        android:textSize="@dimen/Size_Sp_22"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginVertical="@dimen/Padding_Size_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLanguage">
+
+        <RadioButton
+            android:id="@+id/radioEnglish"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/Padding_Size_40"
+            android:layout_marginHorizontal="@dimen/Padding_Size_32"
+            android:text="Phone's language(English)"
+            android:textColor="@color/xyz"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvGroup" />
+
+        <RadioButton
+            android:id="@+id/radioHindi"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/Padding_Size_40"
+            android:layout_marginHorizontal="@dimen/Padding_Size_32"
+            android:text="हिंदी"
+            android:textColor="@color/xyz"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioEveryone" />
+
+        <RadioButton
+            android:id="@+id/radioMrathi"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/Padding_Size_40"
+            android:layout_marginHorizontal="32dp"
+            android:text="मराठी"
+            android:textColor="@color/xyz"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioMyContacts" />
+
+        <RadioButton
+            android:id="@+id/radioBangla"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/Padding_Size_40"
+            android:layout_marginHorizontal="32dp"
+            android:text="বাংলা"
+            android:textColor="@color/xyz"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioMyContacts" />
+
+        <RadioButton
+            android:id="@+id/radioGujrati"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/Padding_Size_40"
+            android:layout_marginHorizontal="32dp"
+            android:text="ગુજરાતી"
+            android:textColor="@color/xyz"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioMyContacts" />
+    </RadioGroup>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

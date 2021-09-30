@@ -1,0 +1,1086 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragment.NetworkUsageFragment">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvCard1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/Padding_Size_60"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="@dimen/Padding_Size_24"
+                    android:layout_height="@dimen/Padding_Size_24"
+                    android:layout_margin="@dimen/Padding_Size_16"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/ic_back"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                    android:layout_marginVertical="@dimen/Padding_Size_12"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="Network usage"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/Padding_Size_18"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvCard1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
+                app:layout_constraintTop_toBottomOf="@+id/cvCard1">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvUsage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/Padding_Size_52"
+                    android:fontFamily="@font/roboto"
+                    android:text="Usage"
+                    android:layout_marginTop="@dimen/Size_Sp_12"
+                    android:textColor="@color/color"
+                    android:textSize="@dimen/Size_Sp_14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvUsageInGB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/Padding_Size_52"
+                    android:fontFamily="@font/roboto"
+                    android:text="10.1"
+                    android:textSize="@dimen/Size_Sp_20"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvUsage" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvGB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="GB"
+                    android:layout_marginBottom="2dp"
+                    android:textSize="@dimen/Padding_Size_14"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvUsageInGB"
+                    app:layout_constraintStart_toEndOf="@+id/tvUsageInGB" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/appCompatImageView2"
+                    android:layout_width="@dimen/Padding_Size_12"
+                    android:layout_height="12dp"
+                    android:src="@drawable/ic_arrow_top"
+                    android:tint="@color/color"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvSent"
+                    app:layout_constraintStart_toStartOf="@+id/tvValueInGB"
+                    app:layout_constraintTop_toTopOf="@+id/tvSent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="@dimen/Padding_Size_16"
+                    android:fontFamily="@font/roboto"
+                    android:text="Sent"
+                    android:textColor="@color/color"
+                    android:textSize="@dimen/Size_Sp_14"
+                    app:layout_constraintStart_toEndOf="@+id/appCompatImageView2"
+                    app:layout_constraintTop_toBottomOf="@+id/tvUsageInGB" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvValueInGB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/Padding_Size_52"
+                    android:layout_marginEnd="2dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="3.5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/Size_Sp_14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTextGB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="GB"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/Size_Sp_14"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvValueInGB"
+                    app:layout_constraintStart_toEndOf="@+id/tvValueInGB" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/arrowdown"
+                    android:layout_width="@dimen/Padding_Size_12"
+                    android:layout_height="10dp"
+                    android:src="@drawable/ic_arroe_down"
+                    android:tint="@color/color"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvRecived"
+                    app:layout_constraintStart_toStartOf="@+id/tvValueRecivedInGB"
+                    app:layout_constraintTop_toTopOf="@+id/tvRecived" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvRecived"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="@dimen/Padding_Size_16"
+                    android:fontFamily="@font/roboto"
+                    android:text="Received"
+                    android:textColor="@color/color"
+                    android:textSize="@dimen/Size_Sp_14"
+                    app:layout_constraintStart_toEndOf="@+id/arrowdown"
+                    app:layout_constraintTop_toBottomOf="@+id/tvUsageInGB" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvValueRecivedInGB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="6.2"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/Size_Sp_14"
+                    app:layout_constraintEnd_toStartOf="@+id/tvTextRecivedGB"
+                    app:layout_constraintTop_toBottomOf="@+id/tvRecived" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTextRecivedGB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="64dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="GB"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/Size_Sp_14"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvValueRecivedInGB"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/Padding_Size_12"
+                    android:background="@color/color"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTextRecivedGB"
+                    tools:layout_editor_absoluteX="52dp" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutCall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/Size_Sp_12"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivCall"
+                        android:layout_width="@dimen/Padding_Size_25"
+                        android:layout_height="@dimen/Padding_Size_25"
+                        android:layout_marginVertical="@dimen/Size_Sp_12"
+                        android:layout_marginHorizontal="@dimen/Padding_Size_32"
+                        android:src="@drawable/ic_baseline_call_24"
+                        android:tint="@color/color"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvCalls"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/Padding_Size_12"
+                        android:fontFamily="@font/roboto"
+                        android:text="Calls"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_14"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivCall"
+                        app:layout_constraintStart_toEndOf="@+id/ivCall"
+                        app:layout_constraintTop_toTopOf="@+id/ivCall" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/upCall"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:src="@drawable/ic_arrow_top"
+                        android:tint="@color/color"
+                        app:layout_constraintBottom_toTopOf="@+id/linearProgressIndicator"
+                        app:layout_constraintEnd_toStartOf="@+id/tvValueRecivedInGBCall1"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvValueRecivedInGBCall1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="2dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="6.2"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toTopOf="@+id/linearProgressIndicator"
+                        app:layout_constraintEnd_toStartOf="@+id/tvTextRecivedGBCall1"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTextRecivedGBCall1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/Padding_Size_24"
+                        android:fontFamily="@font/roboto"
+                        android:text="GB"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toTopOf="@+id/linearProgressIndicator"
+                        app:layout_constraintEnd_toStartOf="@+id/downCall"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/downCall"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:src="@drawable/ic_arroe_down"
+                        android:tint="@color/color"
+                        app:layout_constraintBottom_toTopOf="@+id/linearProgressIndicator"
+                        app:layout_constraintEnd_toStartOf="@+id/tvValueRecivedInGBCall"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvValueRecivedInGBCall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="2dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="6.2"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toTopOf="@+id/linearProgressIndicator"
+                        app:layout_constraintEnd_toStartOf="@+id/tvTextRecivedGBCall"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTextRecivedGBCall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="@dimen/Size_Sp_16"
+                        android:layout_marginEnd="@dimen/Padding_Size_12"
+                        android:fontFamily="@font/roboto"
+                        android:text="GB"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvValueRecivedInGBCall"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/linearProgressIndicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/Padding_Size_65"
+                        android:layout_marginTop="@dimen/Padding_Size_8"
+                        android:layout_marginEnd="@dimen/Padding_Size_8"
+                        app:layout_constraintEnd_toEndOf="@+id/tvTextRecivedGBCall"
+                        app:layout_constraintStart_toEndOf="@+id/ivCall"
+                        app:layout_constraintTop_toBottomOf="@+id/tvCalls" />
+
+                    <TextView
+                        android:id="@+id/tvOutgoing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:text="286 outgoing"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/tvCalls"
+                        app:layout_constraintTop_toBottomOf="@+id/linearProgressIndicator" />
+
+                    <TextView
+                        android:id="@+id/tvDot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/Padding_Size_4"
+                        android:layout_marginTop="@dimen/Padding_Size_4"
+                        android:gravity="center"
+                        android:text="•"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_18"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvOutgoing"
+                        app:layout_constraintStart_toEndOf="@+id/tvOutgoing"
+                        app:layout_constraintTop_toTopOf="@+id/tvOutgoing" />
+
+                    <TextView
+                        android:id="@+id/tvincoming"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center"
+                        android:text="234 incoming"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvOutgoing"
+                        app:layout_constraintStart_toEndOf="@+id/tvDot"
+                        app:layout_constraintTop_toTopOf="@+id/tvOutgoing"
+                        app:layout_constraintVertical_bias="0.0" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutMedia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/Padding_Size_12"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layoutCall">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivMedia"
+                        android:layout_width="@dimen/Padding_Size_25"
+                        android:layout_height="@dimen/Padding_Size_25"
+                        android:layout_marginVertical="@dimen/Size_Sp_12"
+                        android:layout_marginHorizontal="@dimen/Padding_Size_32"                        android:src="@drawable/ic_baseline_perm_media_24"
+                        android:tint="@color/color"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvMedia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/Padding_Size_12"
+                        android:fontFamily="@font/roboto"
+                        android:text="Media"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_14"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivMedia"
+                        app:layout_constraintStart_toEndOf="@+id/ivMedia"
+                        app:layout_constraintTop_toTopOf="@+id/ivMedia" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/upMedia"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:src="@drawable/ic_arrow_top"
+                        android:tint="@color/color"
+                        app:layout_constraintBottom_toTopOf="@+id/linearProgressIndicatorMedia"
+                        app:layout_constraintEnd_toStartOf="@+id/tvValueRecivedInGBMedai1"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvValueRecivedInGBMedai1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="2dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="6.2"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toTopOf="@+id/linearProgressIndicatorMedia"
+                        app:layout_constraintEnd_toStartOf="@+id/tvTextRecivedGBMedia1"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTextRecivedGBMedia1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/Padding_Size_24"
+                        android:fontFamily="@font/roboto"
+                        android:text="GB"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toTopOf="@+id/linearProgressIndicatorMedia"
+                        app:layout_constraintEnd_toStartOf="@+id/downMedia"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/downMedia"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:src="@drawable/ic_arroe_down"
+                        android:tint="@color/color"
+                        app:layout_constraintBottom_toTopOf="@+id/linearProgressIndicatorMedia"
+                        app:layout_constraintEnd_toStartOf="@+id/tvValueRecivedInGBMedia"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvValueRecivedInGBMedia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="2dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="6.2"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toTopOf="@+id/linearProgressIndicatorMedia"
+                        app:layout_constraintEnd_toStartOf="@+id/tvTextRecivedGBMedia"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTextRecivedGBMedia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="@dimen/Size_Sp_16"
+                        android:layout_marginEnd="@dimen/Padding_Size_12"
+                        android:fontFamily="@font/roboto"
+                        android:text="GB"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvValueRecivedInGBMedia"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/linearProgressIndicatorMedia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/Padding_Size_65"
+                        android:layout_marginTop="@dimen/Padding_Size_8"
+                        android:layout_marginEnd="@dimen/Padding_Size_8"
+                        app:layout_constraintEnd_toEndOf="@+id/tvTextRecivedGBMedia"
+                        app:layout_constraintStart_toEndOf="@+id/ivMedia"
+                        app:layout_constraintTop_toBottomOf="@+id/tvMedia" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutGoogle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/Padding_Size_12"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layoutMedia">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivGoogle"
+                        android:layout_width="@dimen/Padding_Size_25"
+                        android:layout_height="@dimen/Padding_Size_25"
+                        android:layout_marginVertical="@dimen/Size_Sp_12"
+                        android:layout_marginHorizontal="@dimen/Padding_Size_32"                        android:src="@drawable/ic_baseline_perm_media_24"
+                        android:tint="@color/color"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvGoogle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/Padding_Size_12"
+                        android:fontFamily="@font/roboto"
+                        android:text="Google Drive"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_14"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivGoogle"
+                        app:layout_constraintStart_toEndOf="@+id/ivGoogle"
+                        app:layout_constraintTop_toTopOf="@+id/ivGoogle" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/upGoogle"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:src="@drawable/ic_arrow_top"
+                        android:tint="@color/color"
+                        app:layout_constraintBottom_toTopOf="@+id/linearProgressIndicatorGoogle"
+                        app:layout_constraintEnd_toStartOf="@+id/tvValueRecivedInGBGoogle1"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvValueRecivedInGBGoogle1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="2dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="6.2"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toTopOf="@+id/linearProgressIndicatorGoogle"
+                        app:layout_constraintEnd_toStartOf="@+id/tvTextRecivedGBGoogle1"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTextRecivedGBGoogle1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/Padding_Size_24"
+                        android:fontFamily="@font/roboto"
+                        android:text="MB"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toTopOf="@+id/linearProgressIndicatorGoogle"
+                        app:layout_constraintEnd_toStartOf="@+id/downGoogle"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/downGoogle"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:src="@drawable/ic_arroe_down"
+                        android:tint="@color/color"
+                        app:layout_constraintBottom_toTopOf="@+id/linearProgressIndicatorGoogle"
+                        app:layout_constraintEnd_toStartOf="@+id/tvValueRecivedInGBGoogle"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvValueRecivedInGBGoogle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="2dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="6.2"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toTopOf="@+id/linearProgressIndicatorGoogle"
+                        app:layout_constraintEnd_toStartOf="@+id/tvTextRecivedGBGoogle"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTextRecivedGBGoogle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="@dimen/Size_Sp_16"
+                        android:layout_marginEnd="@dimen/Padding_Size_12"
+                        android:fontFamily="@font/roboto"
+                        android:text="GB"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvValueRecivedInGBGoogle"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/linearProgressIndicatorGoogle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/Padding_Size_65"
+                        android:layout_marginTop="@dimen/Padding_Size_8"
+                        android:layout_marginEnd="@dimen/Padding_Size_8"
+                        app:layout_constraintEnd_toEndOf="@+id/tvTextRecivedGBGoogle"
+                        app:layout_constraintStart_toEndOf="@+id/ivGoogle"
+                        app:layout_constraintTop_toBottomOf="@+id/tvGoogle" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layoutGoogle">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivMessage"
+                        android:layout_width="@dimen/Padding_Size_25"
+                        android:layout_height="@dimen/Padding_Size_25"
+                        android:layout_marginVertical="@dimen/Size_Sp_12"
+                        android:layout_marginHorizontal="@dimen/Padding_Size_32"                        android:src="@drawable/ic_baseline_textsms_24"
+                        android:tint="@color/color"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/Padding_Size_12"
+                        android:fontFamily="@font/roboto"
+                        android:text="Message"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_14"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivMessage"
+                        app:layout_constraintStart_toEndOf="@+id/ivMessage"
+                        app:layout_constraintTop_toTopOf="@+id/ivMessage" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/upMessage"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:src="@drawable/ic_arrow_top"
+                        android:tint="@color/color"
+                        app:layout_constraintBottom_toTopOf="@+id/linearProgressIndicatorMessage"
+                        app:layout_constraintEnd_toStartOf="@+id/tvValueRecivedInGBMessage1"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvValueRecivedInGBMessage1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="2dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="6.2"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toTopOf="@+id/linearProgressIndicatorMessage"
+                        app:layout_constraintEnd_toStartOf="@+id/tvTextRecivedGBMessage1"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTextRecivedGBMessage1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/Padding_Size_24"
+                        android:fontFamily="@font/roboto"
+                        android:text="MB"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toTopOf="@+id/linearProgressIndicatorMessage"
+                        app:layout_constraintEnd_toStartOf="@+id/downMessage"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/downMessage"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:src="@drawable/ic_arroe_down"
+                        android:tint="@color/color"
+                        app:layout_constraintBottom_toTopOf="@+id/linearProgressIndicatorMessage"
+                        app:layout_constraintEnd_toStartOf="@+id/tvValueRecivedInGBMessage"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvValueRecivedInGBMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="2dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="6.2"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toTopOf="@+id/linearProgressIndicatorMessage"
+                        app:layout_constraintEnd_toStartOf="@+id/tvTextRecivedGBMessage"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTextRecivedGBMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="@dimen/Size_Sp_16"
+                        android:layout_marginEnd="@dimen/Padding_Size_12"
+                        android:fontFamily="@font/roboto"
+                        android:text="MB"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvValueRecivedInGBMessage"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/linearProgressIndicatorMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/Padding_Size_65"
+                        android:layout_marginTop="@dimen/Padding_Size_8"
+                        android:layout_marginEnd="@dimen/Padding_Size_8"
+                        app:layout_constraintEnd_toEndOf="@+id/tvTextRecivedGBMessage"
+                        app:layout_constraintStart_toEndOf="@+id/ivMessage"
+                        app:layout_constraintTop_toBottomOf="@+id/tvMessage" />
+
+                    <TextView
+                        android:id="@+id/tvOutgoingMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:text="5,567 sent"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/tvMessage"
+                        app:layout_constraintTop_toBottomOf="@+id/linearProgressIndicatorMessage" />
+
+                    <TextView
+                        android:id="@+id/tvDotMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/Padding_Size_4"
+                        android:layout_marginTop="@dimen/Padding_Size_4"
+                        android:gravity="center"
+                        android:text="•"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_18"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvOutgoingMessage"
+                        app:layout_constraintStart_toEndOf="@+id/tvOutgoingMessage"
+                        app:layout_constraintTop_toTopOf="@+id/tvOutgoingMessage" />
+
+                    <TextView
+                        android:id="@+id/tvincomingMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center"
+                        android:text="3,004 received"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvOutgoingMessage"
+                        app:layout_constraintStart_toEndOf="@+id/tvDotMessage"
+                        app:layout_constraintTop_toTopOf="@+id/tvOutgoingMessage"
+                        app:layout_constraintVertical_bias="0.0" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/Size_Sp_12"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layoutMessage">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivStatus"
+                        android:layout_width="@dimen/Padding_Size_25"
+                        android:layout_height="@dimen/Padding_Size_25"
+                        android:layout_marginVertical="@dimen/Size_Sp_12"
+                        android:layout_marginHorizontal="@dimen/Padding_Size_32"                        android:src="@drawable/ic_baseline_data_usage_24"
+                        android:tint="@color/color"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/Padding_Size_12"
+                        android:fontFamily="@font/roboto"
+                        android:text="Status"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_14"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivStatus"
+                        app:layout_constraintStart_toEndOf="@+id/ivStatus"
+                        app:layout_constraintTop_toTopOf="@+id/ivStatus" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/upStatus"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:src="@drawable/ic_arrow_top"
+                        android:tint="@color/color"
+                        app:layout_constraintBottom_toTopOf="@+id/linearProgressIndicatorStatus"
+                        app:layout_constraintEnd_toStartOf="@+id/tvValueRecivedInGBStatus1"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvValueRecivedInGBStatus1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="2dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="6.2"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toTopOf="@+id/linearProgressIndicatorStatus"
+                        app:layout_constraintEnd_toStartOf="@+id/tvTextRecivedGBStatus1"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTextRecivedGBStatus1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/Padding_Size_24"
+                        android:fontFamily="@font/roboto"
+                        android:text="MB"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toTopOf="@+id/linearProgressIndicatorStatus"
+                        app:layout_constraintEnd_toStartOf="@+id/downStatus"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/downStatus"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:src="@drawable/ic_arroe_down"
+                        android:tint="@color/color"
+                        app:layout_constraintBottom_toTopOf="@+id/linearProgressIndicatorStatus"
+                        app:layout_constraintEnd_toStartOf="@+id/tvValueRecivedInGBStatus"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvValueRecivedInGBStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="2dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="6.2"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toTopOf="@+id/linearProgressIndicatorStatus"
+                        app:layout_constraintEnd_toStartOf="@+id/tvTextRecivedGBStatus"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTextRecivedGBStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="@dimen/Size_Sp_16"
+                        android:layout_marginEnd="@dimen/Padding_Size_12"
+                        android:fontFamily="@font/roboto"
+                        android:text="MB"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvValueRecivedInGBStatus"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/linearProgressIndicatorStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/Padding_Size_65"
+                        android:layout_marginTop="@dimen/Padding_Size_8"
+                        android:layout_marginEnd="@dimen/Padding_Size_8"
+                        app:layout_constraintEnd_toEndOf="@+id/tvTextRecivedGBStatus"
+                        app:layout_constraintStart_toEndOf="@+id/ivStatus"
+                        app:layout_constraintTop_toBottomOf="@+id/tvStatus" />
+
+                    <TextView
+                        android:id="@+id/tvOutgoingStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:text="567 sent"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/tvStatus"
+                        app:layout_constraintTop_toBottomOf="@+id/linearProgressIndicatorStatus" />
+
+                    <TextView
+                        android:id="@+id/tvDotStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/Padding_Size_4"
+                        android:layout_marginTop="@dimen/Padding_Size_4"
+                        android:gravity="center"
+                        android:text="•"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_18"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvOutgoingStatus"
+                        app:layout_constraintStart_toEndOf="@+id/tvOutgoingStatus"
+                        app:layout_constraintTop_toTopOf="@+id/tvOutgoingStatus" />
+
+                    <TextView
+                        android:id="@+id/tvincomingStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center"
+                        android:text="3,004 received"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvOutgoingStatus"
+                        app:layout_constraintStart_toEndOf="@+id/tvDotStatus"
+                        app:layout_constraintTop_toTopOf="@+id/tvOutgoingStatus"
+                        app:layout_constraintVertical_bias="0.0" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutRoaming"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/Padding_Size_12"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layoutStatus">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivRoaming"
+                        android:layout_width="@dimen/Padding_Size_25"
+                        android:layout_height="@dimen/Padding_Size_25"
+                        android:layout_marginVertical="@dimen/Size_Sp_12"
+                        android:layout_marginHorizontal="@dimen/Padding_Size_32"                        android:src="@drawable/ic_baseline_fiber_manual_record_24"
+                        android:tint="@color/color"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvRoaming"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/Padding_Size_12"
+                        android:fontFamily="@font/roboto"
+                        android:text="Roaming"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_14"
+                        app:layout_constraintBottom_toBottomOf="@+id/ivRoaming"
+                        app:layout_constraintStart_toEndOf="@+id/ivRoaming"
+                        app:layout_constraintTop_toTopOf="@+id/ivRoaming" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/upRoaming"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:src="@drawable/ic_arrow_top"
+                        android:tint="@color/color"
+                        app:layout_constraintBottom_toTopOf="@+id/linearProgressIndicatorRoaming"
+                        app:layout_constraintEnd_toStartOf="@+id/tvValueRecivedInGBRoaming1"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvValueRecivedInGBRoaming1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="2dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="6.2"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toTopOf="@+id/linearProgressIndicatorRoaming"
+                        app:layout_constraintEnd_toStartOf="@+id/tvTextRecivedGBRoaming1"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTextRecivedGBRoaming1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/Padding_Size_24"
+                        android:fontFamily="@font/roboto"
+                        android:text="MB"
+
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toTopOf="@+id/linearProgressIndicatorRoaming"
+                        app:layout_constraintEnd_toStartOf="@+id/downRoaming"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/downRoaming"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:src="@drawable/ic_arroe_down"
+                        android:tint="@color/color"
+                        app:layout_constraintBottom_toTopOf="@+id/linearProgressIndicatorRoaming"
+                        app:layout_constraintEnd_toStartOf="@+id/tvValueRecivedInGBRoaming"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvValueRecivedInGBRoaming"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="2dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="6.2"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toTopOf="@+id/linearProgressIndicatorRoaming"
+                        app:layout_constraintEnd_toStartOf="@+id/tvTextRecivedGBRoaming"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTextRecivedGBRoaming"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="@dimen/Size_Sp_16"
+                        android:layout_marginEnd="@dimen/Padding_Size_12"
+                        android:fontFamily="@font/roboto"
+                        android:text="GB"
+                        android:textColor="@color/color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvValueRecivedInGBRoaming"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/linearProgressIndicatorRoaming"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/Padding_Size_65"
+                        android:layout_marginTop="@dimen/Padding_Size_8"
+                        android:layout_marginEnd="@dimen/Padding_Size_8"
+                        app:layout_constraintEnd_toEndOf="@+id/tvTextRecivedGBRoaming"
+                        app:layout_constraintStart_toEndOf="@+id/ivRoaming"
+                        app:layout_constraintTop_toBottomOf="@+id/tvRoaming" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tvReset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/Padding_Size_24"
+                    android:layout_marginStart="@dimen/Padding_Size_65"
+                    android:fontFamily="@font/roboto"
+                    android:text="Reset statistics"
+                    android:textColor="@color/color"
+                    android:textSize="@dimen/Size_Sp_14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layoutRoaming" />
+
+                <TextView
+                    android:id="@+id/tvResetMSG"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/Padding_Size_65"
+                    android:layout_marginBottom="@dimen/Padding_Size_24"
+                    android:fontFamily="@font/roboto"
+                    android:text="Last Reset time:Never"
+                    android:textColor="@color/color"
+                    android:textSize="@dimen/Size_Sp_12"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvReset" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
