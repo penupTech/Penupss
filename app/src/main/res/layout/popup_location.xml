@@ -4,14 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_gravity="center|top"
-    android:background="@drawable/btnmsgw"
-    android:paddingVertical="@dimen/Padding_Size_16">
+    >
+     <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardElevation="@dimen/Padding_Size_12"
+         android:paddingVertical="@dimen/Padding_Size_16"
+        android:layout_margin="@dimen/Padding_Size_8"
+        app:cardCornerRadius="@dimen/Padding_Size_8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivLocation"
         android:layout_width="@dimen/Padding_Size_100"
         android:layout_height="100dp"
+        android:layout_marginTop="@dimen/Size_Sp_16"
         android:src="@drawable/location"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,25 +41,28 @@
         android:layout_marginVertical="@dimen/Padding_Size_16"
         android:fontFamily="@font/roboto"
         android:text="You aren't sharing live location in any chats"
-        android:textColor="@color/xyz"
-        android:textSize="@dimen/Size_Sp_18"
+        android:textColor="@color/black"
+        android:textSize="@dimen/Size_Sp_16"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivLocation" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvChange"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto"
-        android:layout_marginHorizontal="@dimen/Padding_Size_16"
-        android:layout_marginVertical="@dimen/Padding_Size_16"
-        android:text="Live location requires background location. you can manage this in your device settings."
-        android:textColor="@color/xyz"
-        android:textSize="@dimen/Size_Sp_12"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSharing" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvChange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                android:fontFamily="@font/roboto"
+                android:layout_marginTop="@dimen/Size_Sp_12"
+                android:text="Live location requires background location. you can manage this in your device settings."
+                android:textColor="@color/xyz"
+                android:layout_marginBottom="@dimen/Padding_Size_24"
+                android:textSize="@dimen/Size_Sp_12"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSharing" />
 
-
+        </androidx.constraintlayout.widget.ConstraintLayout>
+     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

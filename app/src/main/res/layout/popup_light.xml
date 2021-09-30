@@ -4,22 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="350dp"
     android:layout_height="wrap_content"
-    android:layout_gravity="center|top"
-    android:background="@drawable/btnmsgw">
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvLight"
+    android:layout_gravity="center|top">
+        <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/Padding_Size_16"
-        android:layout_marginVertical="16dp"
-
-        android:fontFamily="@font/roboto"
-        android:text="Light"
-        android:textColor="@color/xyz"
-        android:textSize="@dimen/Size_Sp_22"
+        android:layout_height="match_parent"
+        app:cardElevation="@dimen/Padding_Size_12"
+         android:paddingVertical="@dimen/Padding_Size_16"
+        android:layout_margin="@dimen/Padding_Size_8"
+        app:cardCornerRadius="@dimen/Padding_Size_8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLight"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/Padding_Size_20"
+                android:layout_marginVertical="16dp"
+
+                android:fontFamily="@font/roboto_bold"
+                android:text="Light"
+                android:textColor="@color/black"
+                android:textSize="@dimen/Size_Sp_22"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -34,40 +49,44 @@
         <RadioButton
             android:id="@+id/radioOff"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/Padding_Size_40"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/Padding_Size_32"
             android:text="None"
-            android:textColor="@color/xyz"
+            android:textSize="@dimen/Size_Sp_16"
+            android:paddingLeft="@dimen/Size_Sp_16"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvGroup" />
 
         <RadioButton
             android:id="@+id/radioDefault"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/Padding_Size_40"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/Padding_Size_32"
             android:text="White"
-            android:textColor="@color/xyz"
+            android:textSize="@dimen/Size_Sp_16"
+            android:paddingLeft="@dimen/Size_Sp_16"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/radioEveryone" />
 
         <RadioButton
             android:id="@+id/radioShort"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/Padding_Size_40"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="32dp"
             android:text="Red"
-            android:textColor="@color/xyz"
+            android:textSize="@dimen/Size_Sp_16"
+            android:paddingLeft="@dimen/Size_Sp_16"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/radioMyContacts" />
 
         <RadioButton
             android:id="@+id/radioLong"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/Padding_Size_40"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="32dp"
             android:text="Yellow"
-            android:textColor="@color/xyz"
+            android:textSize="@dimen/Size_Sp_16"
+            android:paddingLeft="@dimen/Size_Sp_16"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/radioMyContacts" />
 
@@ -75,10 +94,11 @@
         <RadioButton
             android:id="@+id/radioGreen"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/Padding_Size_40"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="32dp"
             android:text="Green"
-            android:textColor="@color/xyz"
+            android:textSize="@dimen/Size_Sp_16"
+            android:paddingLeft="@dimen/Size_Sp_16"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/radioMyContacts" />
 
@@ -86,36 +106,41 @@
         <RadioButton
             android:id="@+id/radioCyan"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/Padding_Size_40"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="32dp"
             android:text="Cyan"
-            android:textColor="@color/xyz"
+            android:textSize="@dimen/Size_Sp_16"
+            android:paddingLeft="@dimen/Size_Sp_16"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/radioMyContacts" />
 
         <RadioButton
             android:id="@+id/radioBlue"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/Padding_Size_40"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="32dp"
             android:text="Blue"
-            android:textColor="@color/xyz"
+            android:textSize="@dimen/Size_Sp_16"
+            android:paddingLeft="@dimen/Size_Sp_16"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/radioMyContacts" />
 
         <RadioButton
             android:id="@+id/radioPurple"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/Padding_Size_40"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="32dp"
             android:text="Purple"
-            android:textColor="@color/xyz"
-            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="@dimen/Size_Sp_16"
+            android:paddingLeft="@dimen/Size_Sp_16"
+           app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/radioMyContacts" />
 
 
 
     </RadioGroup>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

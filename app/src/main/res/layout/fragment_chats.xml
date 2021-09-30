@@ -12,184 +12,200 @@
         android:layout_height="match_parent"
         tools:context=".fragment.ChatsFragment">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/layoutHeader"
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:background="@color/white"
+            android:layout_height="@dimen/Padding_Size_200"
             app:layout_constraintTop_toTopOf="parent">
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvEdit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/Padding_Size_16"
-                android:layout_marginTop="@dimen/Padding_Size_12"
-                android:fontFamily="@font/roboto_bold"
-                android:gravity="center"
-                android:visibility="invisible"
-                android:text="Edit"
-                android:textColor="@color/light_purple"
-                android:textSize="@dimen/Size_Sp_16"
-                app:layout_constraintBottom_toBottomOf="@+id/tvChats"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvChats"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/Padding_Size_16"
-                android:layout_marginTop="@dimen/Padding_Size_12"
-                android:fontFamily="@font/roboto_bold"
-                android:gravity="center"
-                android:text="Chats"
-                android:textColor="@color/black"
-                android:textSize="@dimen/Size_Sp_20"
-                app:layout_constraintEnd_toEndOf="@+id/ivEdit"
-                app:layout_constraintStart_toStartOf="@+id/tvEdit"
-                app:layout_constraintTop_toTopOf="parent" />
-
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/ivEdit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/Padding_Size_16"
-                android:layout_marginTop="@dimen/Padding_Size_12"
-                android:fontFamily="@font/roboto_bold"
-                android:gravity="center"
-                android:src="@drawable/ic_edit"
-                android:text="@string/done"
-                android:textColor="@color/light_purple"
-                android:textSize="@dimen/Size_Sp_18"
-                app:layout_constraintBottom_toBottomOf="@+id/tvChats"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/layoutSearch"
+            <com.google.android.material.appbar.CollapsingToolbarLayout
                 android:layout_width="match_parent"
-                android:layout_marginTop="@dimen/Padding_Size_12"
-                android:layout_height="@dimen/Padding_Size_36"
-                android:layout_marginHorizontal="@dimen/Padding_Size_16"
-                android:background="@drawable/edittext_background"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ivEdit">
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                android:layout_height="match_parent">
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/ivSearch"
-                    android:layout_width="@dimen/Padding_Size_25"
-                    android:layout_height="@dimen/Padding_Size_25"
-                    android:layout_gravity="center|left"
-                    android:tint="@color/gray"
-                    android:layout_marginStart="@dimen/Padding_Size_24"
-                    android:src="@drawable/ic_baseline_search_24"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent">
 
-                <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/tvSearch"
-                    android:layout_width="@dimen/Padding_Size_300"
-                    android:layout_height="match_parent"
-                    android:layout_marginHorizontal="@dimen/Padding_Size_8"
-                    android:background="@null"
-                    android:fontFamily="@font/roboto"
-                    android:gravity="center|left"
-                    android:hint="Search"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/Size_Sp_14"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/ivSearch"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvEdit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                        android:layout_marginTop="@dimen/Padding_Size_12"
+                        android:fontFamily="@font/roboto_bold"
+                        android:gravity="center"
+                        android:text="Edit"
+                        android:textColor="@color/light_purple"
+                        android:textSize="@dimen/Size_Sp_16"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvChats"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvArchived"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/Padding_Size_16"
-                android:layout_marginTop="@dimen/Padding_Size_12"
-                android:fontFamily="@font/roboto"
-                android:gravity="center"
-                android:text="Archived"
-                android:layout_marginVertical="@dimen/Padding_Size_12"
-                android:textColor="@color/gray"
-                android:textSize="@dimen/Size_Sp_14"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/layoutSearch" />
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/ivArchived"
-                android:layout_width="@dimen/Padding_Size_20"
-                android:layout_height="@dimen/Padding_Size_20"
-                android:layout_marginHorizontal="@dimen/Padding_Size_16"
-                android:fontFamily="@font/roboto_bold"
-                android:gravity="center"
-                android:layout_marginTop="@dimen/Padding_Size_12"
-                android:src="@drawable/ic_archive"
-                android:text="@string/done"
-                android:textColor="@color/gray"
-                android:textSize="@dimen/Size_Sp_18"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/layoutSearch" />
-
-            <View
-                android:id="@+id/view1"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/light_gray"
-                android:layout_marginVertical="@dimen/Padding_Size_12"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvArchived" />
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvChats"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                        android:layout_marginTop="@dimen/Padding_Size_12"
+                        android:fontFamily="@font/roboto_bold"
+                        android:gravity="center"
+                        android:text="Chats"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/Size_Sp_20"
+                        app:layout_constraintEnd_toEndOf="@+id/ivEdit"
+                        app:layout_constraintStart_toStartOf="@+id/tvEdit"
+                        app:layout_constraintTop_toTopOf="parent" />
 
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvBroadcastingList"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/Padding_Size_16"
-                android:fontFamily="@font/roboto_bold"
-                android:gravity="center"
-                android:layout_marginVertical="@dimen/Padding_Size_12"
-                app:layout_constraintTop_toBottomOf="@id/view1"
-                android:text="Broadcasting List"
-                android:textColor="@color/light_purple"
-                android:textSize="@dimen/Size_Sp_12"
-                app:layout_constraintStart_toStartOf="parent" />
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivEdit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                        android:layout_marginTop="@dimen/Padding_Size_12"
+                        android:fontFamily="@font/roboto_bold"
+                        android:gravity="center"
+                        android:src="@drawable/ic_edit"
+                        android:text="@string/done"
+                        android:textColor="@color/light_purple"
+                        android:textSize="@dimen/Size_Sp_18"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvChats"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvNewGroup"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/Padding_Size_16"
-                android:fontFamily="@font/roboto_bold"
-                android:gravity="center"
-                android:layout_marginVertical="@dimen/Padding_Size_12"
-                android:text="New Group"
-                android:textColor="@color/light_purple"
-                android:textSize="@dimen/Size_Sp_12"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/view1" />
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layoutSearch"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/Padding_Size_36"
+                        android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                        android:layout_marginTop="@dimen/Padding_Size_12"
+                        android:background="@drawable/edittext_background"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ivEdit">
 
-            <View
-                android:id="@+id/view2"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/light_gray"
-                android:layout_marginVertical="@dimen/Padding_Size_12"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvBroadcastingList" />
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivSearch"
+                            android:layout_width="@dimen/Padding_Size_25"
+                            android:layout_height="@dimen/Padding_Size_25"
+                            android:layout_gravity="center|left"
+                            android:layout_marginStart="@dimen/Padding_Size_24"
+                            android:src="@drawable/ic_baseline_search_24"
+                            android:tint="@color/gray"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/tvSearch"
+                            android:layout_width="@dimen/Padding_Size_300"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="@dimen/Padding_Size_8"
+                            android:background="@null"
+                            android:fontFamily="@font/roboto"
+                            android:gravity="center|left"
+                            android:hint="Search"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/Size_Sp_14"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/ivSearch"
+                            app:layout_constraintTop_toTopOf="parent" />
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvArchived"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                        android:layout_marginVertical="@dimen/Padding_Size_12"
+                        android:layout_marginTop="@dimen/Padding_Size_12"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center"
+                        android:text="Archived"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/Size_Sp_14"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/layoutSearch" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivArchived"
+                        android:layout_width="@dimen/Padding_Size_20"
+                        android:layout_height="@dimen/Padding_Size_20"
+                        android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                        android:layout_marginTop="@dimen/Padding_Size_12"
+                        android:fontFamily="@font/roboto_bold"
+                        android:gravity="center"
+                        android:src="@drawable/ic_archive"
+                        android:text="@string/done"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/Size_Sp_18"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/layoutSearch" />
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="@dimen/Padding_Size_12"
+                        android:background="@color/light_gray"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvArchived" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvBroadcastingList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                        android:layout_marginVertical="@dimen/Padding_Size_12"
+                        android:fontFamily="@font/roboto_bold"
+                        android:gravity="center"
+                        android:text="Broadcasting List"
+                        android:textColor="@color/light_purple"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view1" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvNewGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                        android:layout_marginVertical="@dimen/Padding_Size_12"
+                        android:fontFamily="@font/roboto_bold"
+                        android:gravity="center"
+                        android:text="New Group"
+                        android:textColor="@color/light_purple"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view1" />
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="@dimen/Padding_Size_12"
+                        android:background="@color/light_gray"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvBroadcastingList" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyChatList"
@@ -197,7 +213,7 @@
             android:layout_height="0dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/layoutHeader"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
             tools:layout_editor_absoluteX="0dp" />
         <!-- TODO: Update blank fragment layout -->
 

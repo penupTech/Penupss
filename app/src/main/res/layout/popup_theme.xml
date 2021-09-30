@@ -9,7 +9,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:cardElevation="@dimen/Padding_Size_8"
+        app:cardElevation="@dimen/Padding_Size_12"
         android:layout_margin="@dimen/Padding_Size_8"
         app:cardCornerRadius="@dimen/Size_Sp_16"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -45,31 +45,34 @@
                 <RadioButton
                     android:id="@+id/radioSystemDefoult"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/Padding_Size_40"
+                    android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/Padding_Size_32"
                     android:layout_marginTop="@dimen/Padding_Size_24"
+                    android:textSize="@dimen/Size_Sp_16"
+                    android:paddingLeft="@dimen/Size_Sp_16"
                     android:text="System default"
-                    android:textColor="@color/xyz"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tvGroup" />
 
                 <RadioButton
                     android:id="@+id/radioLight"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/Padding_Size_40"
+                    android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/Padding_Size_32"
                     android:text="Light"
-                    android:textColor="@color/xyz"
+                    android:textSize="@dimen/Size_Sp_16"
+                    android:paddingLeft="@dimen/Size_Sp_16"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/radioEveryone" />
 
                 <RadioButton
                     android:id="@+id/radioDark"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/Padding_Size_40"
+                    android:layout_height="wrap_content"
                     android:layout_marginHorizontal="32dp"
                     android:text="Dark"
-                    android:textColor="@color/xyz"
+                    android:textSize="@dimen/Size_Sp_16"
+                    android:paddingLeft="@dimen/Size_Sp_16"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/radioMyContacts" />
             </RadioGroup>
@@ -92,7 +95,7 @@
                 android:id="@+id/tvOk"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/Padding_Size_16"
+              android:layout_marginHorizontal="@dimen/Padding_Size_52"
                 android:layout_marginVertical="16dp"
                 android:fontFamily="@font/roboto"
                 android:text="OK"

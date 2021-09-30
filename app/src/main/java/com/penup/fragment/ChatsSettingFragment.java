@@ -45,6 +45,7 @@ public class ChatsSettingFragment extends Fragment implements View.OnClickListen
         switch (v.getId()) {
             case R.id.ivBack:
                 getActivity().onBackPressed();
+                break;
             case R.id.layoutHistory:
                 fragment = new ChatHistoryFragment();
                 loadFragment(fragment);

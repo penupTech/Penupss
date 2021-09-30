@@ -318,6 +318,23 @@
                         app:layout_constraintStart_toEndOf="@+id/ivLink"
                         app:layout_constraintTop_toBottomOf="@+id/tvLink" />
 
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvComming"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center|left"
+                        android:text="( Coming Soon )"
+                        android:textColor="@color/msg_color"
+                        android:textSize="@dimen/Size_Sp_12"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/ivLinkForward"
+
+                        app:layout_constraintStart_toEndOf="@+id/tvLink"
+                        app:layout_constraintTop_toTopOf="parent" />
+
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/ivLinkForward"
                         android:layout_width="wrap_content"
@@ -454,7 +471,6 @@ android:layout_marginTop="3dp"                        android:layout_marginStart
                         android:layout_width="@dimen/Padding_Size_40"
                         android:layout_height="@dimen/Padding_Size_40"
                         android:layout_gravity="left|center"
-
                         android:src="@drawable/ic_notification"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"

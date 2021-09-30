@@ -14,7 +14,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cvCard1"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/Padding_Size_90"
+            android:layout_height="@dimen/Padding_Size_80"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
