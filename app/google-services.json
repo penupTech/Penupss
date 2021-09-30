@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "92981358788",
+    "project_id": "penup-c6ac6",
+    "storage_bucket": "penup-c6ac6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:92981358788:android:11323a0102fde793669991",
+        "android_client_info": {
+          "package_name": "com.penup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "92981358788-66euf30bc2od8dfad2ds8s87f9a9a130.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhGiYCemqBlhbMN7LRnZgnhJgAa-JS2m8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "92981358788-66euf30bc2od8dfad2ds8s87f9a9a130.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
