@@ -22,6 +22,8 @@
     <color name="online">#898989</color>
     <color name="redd">#FF3B30</color>
     <color name="newcolor">#F6F6F6</color>
+    <color name="light_yellow">#ffcc66</color>
+    <color name="view_color">#ebebe0</color>
 
 
 </resources>

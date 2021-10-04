@@ -1,5 +1,7 @@
 package com.penup.fragment;
 
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.databinding.DataBindingUtil;
@@ -27,6 +29,7 @@ public class NetworkUsageFragment extends Fragment implements View.OnClickListen
 
     private void inIt() {
         binding.ivBack.setOnClickListener(this);
+
     }
 
     @Override

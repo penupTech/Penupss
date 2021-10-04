@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioGroup
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <RadioButton
+
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="@dimen/Padding_Size_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </RadioGroup>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Signal"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/black"
+            android:textSize="@dimen/Size_Sp_16"
+            app:layout_constraintBottom_toBottomOf="@+id/radio1"
+            app:layout_constraintStart_toEndOf="@+id/radio1"
+            app:layout_constraintTop_toTopOf="@+id/radio1" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:layout_marginStart="@dimen/Padding_Size_60"
+            android:layout_marginTop="@dimen/Padding_Size_8"
+            android:background="@color/gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/radio1"
+            app:layout_constraintTop_toBottomOf="@+id/tvName" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

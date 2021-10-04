@@ -38,10 +38,13 @@
                 android:id="@+id/displayName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="16dp"
                 android:gravity="center|left"
+                android:fontFamily="@font/roboto"
                 android:text="Jay Singh"
+                android:textSize="@dimen/Size_Sp_16"
                 android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/ivimage"
                 app:layout_constraintStart_toEndOf="@+id/ivimage"
                 app:layout_constraintTop_toTopOf="@+id/ivimage" />
 
@@ -49,22 +52,16 @@
                 android:id="@+id/phoneNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
                 android:gravity="center|left"
-                android:text="9877654567"
-                android:textColor="@color/black"
+                android:text="116.9 MB"
+                android:textSize="@dimen/Size_Sp_12"
+                android:layout_marginEnd="@dimen/Padding_Size_32"
+                android:textColor="@color/color"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/ivimage"
-                app:layout_constraintTop_toBottomOf="@+id/displayName" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
 
-                android:background="@color/view_color"
-                app:layout_constraintTop_toBottomOf="@+id/phoneNumber" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 

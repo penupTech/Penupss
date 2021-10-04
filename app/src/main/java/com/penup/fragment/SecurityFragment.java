@@ -25,7 +25,9 @@ public class SecurityFragment extends Fragment implements View.OnClickListener {
     }
 
     private void inIt() {
+
         binding.ivBack.setOnClickListener(this::onClick);
+
     }
 
     @Override

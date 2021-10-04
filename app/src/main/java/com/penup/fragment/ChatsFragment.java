@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.penup.R;
 import com.penup.adapter.ChatListAdapter;
 import com.penup.databinding.FragmentChatsBinding;
@@ -35,7 +36,11 @@ public class ChatsFragment extends Fragment implements View.OnClickListener {
         chatListAdapter = new ChatListAdapter(data, getActivity());
         binding.recyChatList.setAdapter(chatListAdapter);
         binding.ivEdit.setOnClickListener(this::onClick);
+
+       // binding.recyChatList.setNestedScrollingEnabled(false);
+
         //  binding.ivU.setOnClickListener(this::onClick);
+
     }
 
     @Override

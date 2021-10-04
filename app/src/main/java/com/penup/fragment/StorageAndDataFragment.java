@@ -37,6 +37,7 @@ Fragment  fragment;
         binding.layoutDocument.setOnClickListener(this::onClick);
         binding.layoutUpload.setOnClickListener(this::onClick);
         binding.layoutNetwork.setOnClickListener(this::onClick);
+        binding.layoutBuisiness.setOnClickListener(this::onClick);
 
     }
 
@@ -70,7 +71,10 @@ Fragment  fragment;
                 fragment=new NetworkUsageFragment();
                 loadFragment(fragment);
                 break;
-
+            case R.id.layoutBuisiness:
+                fragment=new ManageStorageFragment();
+                loadFragment(fragment);
+                break;
         }
 
     }

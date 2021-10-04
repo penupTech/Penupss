@@ -1,29 +1,26 @@
 package com.penup.adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
-
 import com.penup.R;
-import com.penup.activity.ChatIndividualActivity;
-import com.penup.databinding.ChatListItemViewBinding;
+import com.penup.databinding.ContactDataUsesPersonListViewBinding;
+import com.penup.databinding.MediaItemsListBinding;
 
-public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHolder> {
+public class LargerMediaListAdapter extends RecyclerView.Adapter<LargerMediaListAdapter.ViewHolder> {
 
     private String[] mData;
     private Context context;
     private LayoutInflater layoutInflater;
-    ChatListItemViewBinding binding;
+    MediaItemsListBinding binding;
 
 
-    public ChatListAdapter(String[] mData, Context context) {
+    public LargerMediaListAdapter(String[] mData, Context context) {
         this.mData = mData;
         this.context = context;
     }
@@ -32,19 +29,19 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),
-                R.layout.chat_list_item_view, parent, false);
+                R.layout.media_items_list, parent, false);
         return new ViewHolder(binding);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.binding.tvName.setText(mData[position]);
-        holder.binding.cvCard1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                context.startActivity(new Intent(context, ChatIndividualActivity.class));
-            }
-        });
+        holder.binding.displayName.setText(mData[position]);
+//        holder.binding.cvCard1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                context.startActivity(new Intent(context, ChatIndividualActivity.class));
+//            }
+//        });
 
 //        holder.binding.ivBank.setImageResource(mData[position]);
 //        Picasso.with(context)
@@ -59,9 +56,9 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        private ChatListItemViewBinding binding;
+        private MediaItemsListBinding binding;
 
-        public ViewHolder(ChatListItemViewBinding itemBinding) {
+        public ViewHolder(MediaItemsListBinding itemBinding) {
             super(itemBinding.getRoot());
             this.binding = itemBinding;
         }

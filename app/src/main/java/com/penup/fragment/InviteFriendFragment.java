@@ -21,33 +21,39 @@ import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
 import com.penup.R;
+import com.penup.adapter.ChatListAdapter;
 import com.penup.adapter.ContactAdapter;
 import com.penup.modle.ContactsInfo;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class InviteFriendFragment extends Fragment {
+public class InviteFriendFragment extends Fragment implements View.OnClickListener {
     com.penup.databinding.FragmentInviteFriendBinding binding;
     List<ContactsInfo> contactsInfoList;
     String contactId = null;
     String displayName = null;
     public static final int PERMISSIONS_REQUEST_READ_CONTACTS = 1;
     ContactAdapter contactAdapter;
+    String[] data = {"Arjun", "Sagar", "Manish", "Amit", "Aanurag", "Raj", "Shubham", "Ram", "Singh", "Max", "Min", "XYZ", "Manish", "Amit", "Aanurag", "Raj", "Shubham", "Ram", "Manish", "Amit", "Aanurag", "Raj", "Shubham", "Ram",};
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-      binding = DataBindingUtil.inflate(inflater, R.layout.fragment_invite_friend, container, false);
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_invite_friend, container, false);
 
         inIt();
         return binding.getRoot();
     }
 
     private void inIt() {
-        requestContactPermission();
-        binding.fastscroll.setRecyclerView(binding.recyclerView1);
-       // myViewProvider = new MyScrollerViewProvider();
+        //requestContactPermission();
+       // binding.fastscroll.setRecyclerView(binding.recyclerView1);
+        contactAdapter = new ContactAdapter(data, getActivity());
+       // binding.recyclerView1.setAdapter(data, contactAdapter);
+        binding.recyclerView1.setAdapter(contactAdapter);
+        // myViewProvider = new MyScrollerViewProvider();
+        binding.ivBack.setOnClickListener(this);
     }
 
 
@@ -93,8 +99,8 @@ public class InviteFriendFragment extends Fragment {
 //        listView.setAdapter(dataAdapter);
 //        listView.setFastScrollEnabled(true);
 
-        contactAdapter = new ContactAdapter(contactsInfoList, getActivity());
-        binding.recyclerView1.setAdapter(contactAdapter);
+//        contactAdapter = new ContactAdapter(contactsInfoList, getActivity());
+//        binding.recyclerView1.setAdapter(contactAdapter);
     }
 
     public void requestContactPermission() {
@@ -145,5 +151,12 @@ public class InviteFriendFragment extends Fragment {
                 return;
             }
         }
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+
+    }
     }
 }
