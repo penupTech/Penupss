@@ -4,39 +4,42 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.futuremind.recyclerviewfastscroll.SectionTitleProvider;
 import com.penup.R;
+import com.penup.databinding.BroadcastItemsListViewBinding;
 import com.penup.databinding.ContactItemsListViewBinding;
 import com.penup.modle.ContactsInfo;
 
 import java.util.List;
 
-public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHolder>  {
+public class BroadcastGroupAdapter extends RecyclerView.Adapter<BroadcastGroupAdapter.ViewHolder>  {
 
     List<ContactsInfo> data;
+    String[]data1;
     private Context context;
     private LayoutInflater layoutInflater;
     private String[] mData;
 
-    public ContactAdapter(List<ContactsInfo> data, Context context) {
+    public BroadcastGroupAdapter(List<ContactsInfo> data, Context context) {
         this.data = data;
         this.context = context;
     }
-    public ContactAdapter(String[] mData, Context context) {
+    public BroadcastGroupAdapter(String[]data1) {
+        this.data1 = data1;
+
+    }
+    public BroadcastGroupAdapter(String[] mData, Context context) {
         this.mData = mData;
         this.context = context;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        ContactItemsListViewBinding binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),
-                R.layout.contact_items_list_view, parent, false);
+        BroadcastItemsListViewBinding binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), R.layout.broadcast_items_list_view, parent, false);
         return new ViewHolder(binding);
     }
 
@@ -44,11 +47,13 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHold
     public void onBindViewHolder(@NonNull  ViewHolder holder, int position) {
 
         holder.binding.displayName.setText(mData[position]);
-        holder.binding.ivSelected.setVisibility(View.GONE);
-        holder.binding.tvUserMsg.setVisibility(View.GONE);
+        holder.binding.tvUserMsg.setVisibility(View.VISIBLE);
+        holder.binding.ivClear.setVisibility(View.GONE);
         holder.binding.layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                holder.binding.ivSelected.setVisibility(View.VISIBLE);
+
                // Toast.makeText(context,"Wellcome"+reportData.getDisplayName(),Toast.LENGTH_LONG).show();
             }
         });
@@ -66,9 +71,9 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHold
 //    }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        private ContactItemsListViewBinding binding;
+        private BroadcastItemsListViewBinding binding;
 
-        public ViewHolder(ContactItemsListViewBinding itemBinding) {
+        public ViewHolder(BroadcastItemsListViewBinding itemBinding) {
             super(itemBinding.getRoot());
             this.binding = itemBinding;
         }

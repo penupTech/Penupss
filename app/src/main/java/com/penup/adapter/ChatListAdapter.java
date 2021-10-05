@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.penup.R;
 import com.penup.activity.ChatIndividualActivity;
+import com.penup.activity.NewBroadcastActivity;
 import com.penup.databinding.ChatListItemViewBinding;
 
 public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHolder> {
@@ -42,7 +43,12 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
         holder.binding.cvCard1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                context.startActivity(new Intent(context, ChatIndividualActivity.class));
+                Intent intent = new Intent(context,ChatIndividualActivity.class);
+                //intent.putExtra("Key", "FABSAVE");
+                intent.putExtra("Key", "Chat");
+                context.startActivity(intent);
+              //  context.startActivity(new Intent(context, ChatIndividualActivity.class));
+
             }
         });
 

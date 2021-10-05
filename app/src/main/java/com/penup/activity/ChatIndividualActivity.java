@@ -39,6 +39,8 @@ public class ChatIndividualActivity extends AppCompatActivity implements AudioRe
     private long time;
     ImageView ivBack;
     ActivityChatIndividualBinding binding;
+    String data;
+    Bundle bundle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +53,7 @@ public class ChatIndividualActivity extends AppCompatActivity implements AudioRe
     private void inIt() {
 
         binding.ivBack.setOnClickListener(this::onClick);
+        binding.ivBack1.setOnClickListener(this::onClick);
         binding.ivUser.setOnClickListener(this::onClick);
         binding.tvUnerName.setOnClickListener(this::onClick);
         binding.ivVideoCall.setOnClickListener(this::onClick);
@@ -70,6 +73,18 @@ public class ChatIndividualActivity extends AppCompatActivity implements AudioRe
         audioRecordView.getMessageView().requestFocus();
         audioRecordView.setAttachmentOptions(AttachmentOption.getDefaultList(), this);
         audioRecordView.removeAttachmentOptionAnimation(false);
+
+//         bundle = getIntent().getExtras();
+        // data = bundle.getString("Key");
+        data = getIntent().getExtras().getString("Key");
+        if (data.equals("FABSAVE")) {
+            binding.layoutIndividial.setVisibility(View.GONE);
+            binding.layoutBroadcast.setVisibility(View.VISIBLE);
+        } else if (data.equals("Chat")) {
+            binding.layoutIndividial.setVisibility(View.VISIBLE);
+            binding.layoutBroadcast.setVisibility(View.GONE);
+        }
+
     }
 
 
@@ -81,6 +96,9 @@ public class ChatIndividualActivity extends AppCompatActivity implements AudioRe
                 showDialog();
                 break;
             case R.id.ivBack:
+                finish();
+                break;
+            case R.id.ivBack1:
                 finish();
                 break;
             case R.id.tvUnerName:

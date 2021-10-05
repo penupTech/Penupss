@@ -48,9 +48,9 @@ public class InviteFriendFragment extends Fragment implements View.OnClickListen
 
     private void inIt() {
         //requestContactPermission();
-       // binding.fastscroll.setRecyclerView(binding.recyclerView1);
+        // binding.fastscroll.setRecyclerView(binding.recyclerView1);
         contactAdapter = new ContactAdapter(data, getActivity());
-       // binding.recyclerView1.setAdapter(data, contactAdapter);
+        // binding.recyclerView1.setAdapter(data, contactAdapter);
         binding.recyclerView1.setAdapter(contactAdapter);
         // myViewProvider = new MyScrollerViewProvider();
         binding.ivBack.setOnClickListener(this);

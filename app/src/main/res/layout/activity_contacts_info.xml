@@ -7,99 +7,140 @@
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/newcolor"
         tools:context=".activity.ContactsInfoActivity">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cvCard1"
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:layout_constraintTop_toTopOf="parent">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+               android:id="@+id/ct"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                app:contentScrim="@color/white"
+                app:title="Contact Info"
+                app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+               >
 
+                <!--We are adding the image that we have added earlier
+                      in the drawable folder.The attribute app:layout_collapseMode="parallax"
+                      causes the image to move when user scrolls at a specific ratio. -->
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/ivBack"
-                    android:layout_width="@dimen/Padding_Size_20"
-                    android:layout_height="@dimen/Padding_Size_20"
-                    android:layout_margin="@dimen/Padding_Size_16"
-                    android:src="@drawable/ic_back"
-                    app:layout_constraintBottom_toBottomOf="@+id/tvName"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/tvName" />
+                    android:layout_width="match_parent"
+                    android:layout_height="450dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/one"
+                    app:layout_collapseMode="parallax" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content">
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tvName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginVertical="@dimen/Padding_Size_12"
-                    android:fontFamily="@font/roboto_medium"
-                    android:gravity="center"
-                    android:text="Martha"
-                    android:textColor="@color/missed"
-                    android:textSize="@dimen/Size_Sp_16"
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivBack"
+                        android:layout_width="@dimen/Padding_Size_20"
+                        android:layout_height="@dimen/Padding_Size_20"
+                        android:layout_margin="@dimen/Padding_Size_16"
+                        android:src="@drawable/ic_back"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvName"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tvName" />
 
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/ivBack"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/Padding_Size_12"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center"
+                        android:text="Martha"
+                        android:textColor="@color/missed"
+                        android:textSize="@dimen/Size_Sp_16"
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tvContact"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/Padding_Size_16"
-                    android:layout_marginVertical="@dimen/Padding_Size_12"
-                    android:fontFamily="@font/roboto"
-                    android:gravity="center"
-                    android:text="Contact Info"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/Size_Sp_20"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivBack"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvContact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                        android:layout_marginVertical="@dimen/Padding_Size_12"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center"
+                        android:text="Contact Info"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/Size_Sp_20"
 
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tvEdit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/Padding_Size_16"
-                    android:layout_marginVertical="@dimen/Padding_Size_12"
-                    android:fontFamily="@font/roboto"
-                    android:gravity="center"
-                    android:text="Edit"
-                    android:textColor="@color/missed"
-                    android:textSize="@dimen/Size_Sp_16"
-
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvEdit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                        android:layout_marginVertical="@dimen/Padding_Size_12"
+                        android:fontFamily="@font/roboto"
+                        android:gravity="center"
+                        android:text="Edit"
+                        android:textColor="@color/missed"
+                        android:textSize="@dimen/Size_Sp_16"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <!-- Thw attribute app:layout_collapseMode="pin" is set so that
+                     sticks to the top when the user scrolls the view up-->
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
+
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cvCard1">
-
-            <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintBottom_toBottomOf="parent">
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="8sp"
+                    android:padding="16dp"
+                    android:visibility="gone"
+                    android:text="@string/content"
+                    android:textSize="20sp"
+                    app:layout_constraintTop_toTopOf="parent" />
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -109,6 +150,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="400dp"
                         android:background="@drawable/ivuser"
+                        android:visibility="gone"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <androidx.cardview.widget.CardView
@@ -517,10 +559,8 @@
                     </androidx.cardview.widget.CardView>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </ScrollView>
 
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

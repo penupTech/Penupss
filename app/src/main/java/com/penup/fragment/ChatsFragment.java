@@ -1,6 +1,7 @@
 package com.penup.fragment;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.databinding.DataBindingUtil;
@@ -15,6 +16,7 @@ import android.view.Window;
 
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.penup.R;
+import com.penup.activity.NewBroadcastActivity;
 import com.penup.adapter.ChatListAdapter;
 import com.penup.databinding.FragmentChatsBinding;
 
@@ -33,14 +35,11 @@ public class ChatsFragment extends Fragment implements View.OnClickListener {
 
 
     private void inIt() {
+
+        binding.ivEdit.setOnClickListener(this::onClick);
+        binding.tvBroadcastingList.setOnClickListener(this::onClick);
         chatListAdapter = new ChatListAdapter(data, getActivity());
         binding.recyChatList.setAdapter(chatListAdapter);
-        binding.ivEdit.setOnClickListener(this::onClick);
-
-       // binding.recyChatList.setNestedScrollingEnabled(false);
-
-        //  binding.ivU.setOnClickListener(this::onClick);
-
     }
 
     @Override
@@ -50,7 +49,9 @@ public class ChatsFragment extends Fragment implements View.OnClickListener {
                 fragment = new EditProfileFragment();
                 loadFragment(fragment);
                 break;
-
+            case R.id.tvBroadcastingList:
+                startActivity(new Intent(getContext(), NewBroadcastActivity.class));
+                break;
         }
 
     }

@@ -14,7 +14,8 @@
         android:theme="@style/Theme.PenUp"
         android:usesCleartextTraffic="true"
         tools:replace="android:theme">
-        <activity android:name=".activity.StaredActivity"></activity>
+        <activity android:name=".activity.NewBroadcastActivity"></activity>
+        <activity android:name=".activity.StaredActivity" />
         <activity android:name=".activity.LargerMediaActivity" />
         <activity android:name=".activity.PersonalChatMediaActivity" />
         <activity
