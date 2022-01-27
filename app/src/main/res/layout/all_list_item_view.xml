@@ -14,7 +14,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cvCard4"
             android:layout_width="match_parent"
-            android:layout_height="90dp"
+            android:layout_height="wrap_content"
 
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +28,9 @@
                     android:id="@+id/layout11"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
@@ -42,10 +44,11 @@
                         app:layout_constraintTop_toTopOf="parent">
 
                         <androidx.appcompat.widget.AppCompatImageView
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:padding="8dp"
+
+                            android:layout_marginVertical="6dp"
                             android:src="@drawable/img" />
                     </LinearLayout>
 
@@ -54,7 +57,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
-                        android:layout_marginTop="12dp"
+                        android:layout_marginTop="6dp"
                         android:fontFamily="@font/roboto_medium"
                         android:text="Manish Parashar"
                         android:textColor="@color/black"
@@ -64,12 +67,13 @@
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/tvCall"
-                        android:layout_width="20dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="16dp"
+                        android:layout_height="@dimen/Padding_Size_16"
                         android:layout_marginStart="12dp"
                         android:src="@drawable/ic_baseline_phone_callback_24"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvTime10"
                         app:layout_constraintStart_toEndOf="@+id/ivuserRecent10"
-                        app:layout_constraintTop_toBottomOf="@+id/tvUserName10">
+                        app:layout_constraintTop_toTopOf="@+id/tvTime10">
 
                     </androidx.appcompat.widget.AppCompatImageView>
 
@@ -113,13 +117,14 @@
                     <View
                         android:id="@+id/view"
                         android:layout_width="match_parent"
-                        android:layout_height="0.2dp"
-                        android:layout_marginTop="@dimen/Padding_Size_12"
-                        android:layout_marginStart="70dp"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="@dimen/Padding_Size_70"
+                        android:layout_marginTop="@dimen/Padding_Size_8"
                         android:background="#E5E5E5"
-                        app:layout_constraintTop_toBottomOf="@id/ivuserRecent10" />
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ivuserRecent10"
+                        tools:layout_editor_absoluteX="70dp" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

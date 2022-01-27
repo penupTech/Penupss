@@ -8,6 +8,7 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cons"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/Setting_color"
@@ -40,7 +41,6 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/shadow"
                 android:orientation="horizontal"
-                android:paddingVertical="6dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/tvDone"
@@ -52,10 +52,9 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:background="@drawable/bbbb"
-                    android:layout_marginHorizontal="3dp"
                     android:gravity="center"
                     android:orientation="horizontal"
-                    android:paddingVertical="2dp">
+                    android:paddingVertical="@dimen/Padding_Size_8">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -75,7 +74,7 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:orientation="horizontal"
-                    android:paddingVertical="2dp"
+                    android:paddingVertical="@dimen/Padding_Size_8"
                     android:visibility="gone">
 
 
@@ -96,10 +95,9 @@
                     android:layout_width="75dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:paddingHorizontal="3dp"
                     android:gravity="center"
                     android:orientation="horizontal"
-                    android:paddingVertical="2dp">
+                    android:paddingVertical="@dimen/Padding_Size_8">
 
 
                     <TextView
@@ -115,16 +113,14 @@
 
                 <LinearLayout
                     android:id="@+id/female"
-                    android:layout_width="70dp"
+                    android:layout_width="75dp"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:background="@drawable/bbbb"
-                   android:paddingHorizontal="3dp"
+                    android:background="@drawable/dddd"
                     android:gravity="center"
+                    android:visibility="gone"
                     android:orientation="horizontal"
-                    android:paddingVertical="2dp">
-
-
+                    android:paddingVertical="@dimen/Padding_Size_8">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -136,6 +132,7 @@
 
                 </LinearLayout>
             </LinearLayout>
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layout"
                 android:layout_width="@dimen/Padding_Size_150"

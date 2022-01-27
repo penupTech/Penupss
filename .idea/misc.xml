@@ -3,6 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Project/GitPaytelProject/penupnew/app/src/main/res/drawable/bbbb.xml" value="0.2128205128205128" />
+        <entry key="..\:/Android Project/GitPaytelProject/penupnew/app/src/main/res/drawable/dddd.xml" value="0.2128205128205128" />
+        <entry key="..\:/Android Project/GitPaytelProject/penupnew/app/src/main/res/drawable/shadow.xml" value="0.2128205128205128" />
+        <entry key="..\:/Android Project/GitPaytelProject/penupnew/app/src/main/res/layout/activity_away_msg.xml" value="0.2" />
+        <entry key="..\:/Android Project/GitPaytelProject/penupnew/app/src/main/res/layout/activity_chat_individual.xml" value="0.2" />
+        <entry key="..\:/Android Project/GitPaytelProject/penupnew/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android Project/GitPaytelProject/penupnew/app/src/main/res/layout/activity_message.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android Project/GitPaytelProject/penupnew/app/src/main/res/layout/activity_welcome.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android Project/GitPaytelProject/penupnew/app/src/main/res/layout/all_list_item_view.xml" value="0.2" />
+        <entry key="..\:/Android Project/GitPaytelProject/penupnew/app/src/main/res/layout/chat_list_item_view.xml" value="0.2" />
+        <entry key="..\:/Android Project/GitPaytelProject/penupnew/app/src/main/res/layout/fragment_business_tools.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android Project/GitPaytelProject/penupnew/app/src/main/res/layout/fragment_call.xml" value="0.17314814814814813" />
+        <entry key="..\:/Android Project/GitPaytelProject/penupnew/app/src/main/res/layout/fragment_chats.xml" value="0.2" />
+        <entry key="..\:/Android Project/GitPaytelProject/penupnew/app/src/main/res/layout/fragment_two_setp_varification_1st.xml" value="0.33" />
+        <entry key="..\:/Android Project/GitPaytelProject/penupnew/app/src/main/res/layout/missedcall_list_item_view.xml" value="0.5" />
         <entry key="..\:/Paytel Project/PenUp/app/src/main/res/layout/activity_calling.xml" value="0.24010416666666667" />
         <entry key="..\:/Paytel Project/PenUp/app/src/main/res/layout/activity_chat_individual.xml" value="0.25416666666666665" />
         <entry key="..\:/Paytel Project/PenUp/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />

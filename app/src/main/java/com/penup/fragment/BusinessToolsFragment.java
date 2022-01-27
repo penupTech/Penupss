@@ -1,5 +1,6 @@
 package com.penup.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.databinding.DataBindingUtil;
@@ -11,35 +12,41 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.penup.R;
+import com.penup.activity.AwayMsgActivity;
 import com.penup.databinding.FragmentBusinessToolsBinding;
 
 public class BusinessToolsFragment extends Fragment implements View.OnClickListener {
     FragmentBusinessToolsBinding binding;
-Fragment fragment;
+    Fragment fragment;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_business_tools, container, false);
-     inIt();
+        inIt();
         return binding.getRoot();
     }
 
     private void inIt() {
         binding.ivBack.setOnClickListener(this::onClick);
         binding.layoutCatalogue.setOnClickListener(this::onClick);
+        binding.layoutMessages.setOnClickListener(this);
 
 
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.ivBack:
                 getActivity().onBackPressed();
                 break;
             case R.id.layoutCatalogue:
                 fragment = new CatalogueShowFragment();
                 loadFragment(fragment);
+                break;
+            case R.id.layoutMessages:
+                startActivity(new Intent(getContext(), AwayMsgActivity.class));
                 break;
         }
 

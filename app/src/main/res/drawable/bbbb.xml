@@ -4,6 +4,10 @@
     <solid android:color="@color/light_purple" />
 
 
-    <corners android:radius="24dp" />
+<!--    <corners android:radius="24dp" />-->
+    <corners android:topRightRadius="0dp"
+        android:topLeftRadius="@dimen/Padding_Size_24"
+        android:bottomRightRadius="0dp"
+        android:bottomLeftRadius="@dimen/Padding_Size_24"/>
 
 </shape>
