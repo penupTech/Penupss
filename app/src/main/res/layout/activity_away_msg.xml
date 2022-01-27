@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.AwayMsgActivity">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvCard1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="@dimen/Padding_Size_24"
+                    android:layout_height="@dimen/Padding_Size_24"
+                    android:layout_margin="@dimen/Padding_Size_16"
+                    android:src="@drawable/ic_back"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvSettings"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvSettings" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSettings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                    android:layout_marginVertical="@dimen/Padding_Size_12"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center"
+
+                    android:text="Save"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/Size_Sp_14"
+
+
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView2"
+                    app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                    android:layout_marginVertical="@dimen/Padding_Size_12"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="Away Message"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/Size_Sp_16"
+                    app:layout_constraintBottom_toBottomOf="@+id/ivBack"
+                    app:layout_constraintStart_toEndOf="@+id/ivBack"
+                    app:layout_constraintTop_toTopOf="@+id/ivBack" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/Padding_Size_12"
+                    android:src="@drawable/ic_baseline_more_vert_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvAwayMSG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/Padding_Size_16"
+            android:layout_marginVertical="@dimen/Padding_Size_32"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Send greeting message"
+            android:textColor="@color/black"
+            android:textSize="@dimen/Padding_Size_14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvCard1" />
+
+        <TextView
+            android:id="@+id/tvAwaySubMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/Padding_Size_16"
+            android:fontFamily="@font/roboto"
+            android:text="Automatically reply with a message when you are away"
+            android:textColor="@color/black"
+            android:textSize="@dimen/Padding_Size_12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAwayMSG" />
+
+        <Switch
+            android:id="@+id/swMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/tvAwayMSG"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvAwayMSG" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lay1"
+            android:layout_marginTop="@dimen/Padding_Size_32"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAwaySubMsg">
+
+            <TextView
+                android:id="@+id/tvAwayWrite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                android:fontFamily="@font/roboto_medium"
+                android:text="Away message"
+                android:textColor="@color/black"
+                android:textSize="@dimen/Padding_Size_14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvAwayWriteMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/Padding_Size_16"
+                android:fontFamily="@font/roboto"
+                android:text="Thank you for your message. We're unavailable\n right now, but will respond as soon as possible."
+                android:textColor="@color/black"
+                android:textSize="@dimen/Padding_Size_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvAwayWrite" />
+
+            <ImageView
+                android:id="@+id/ivEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/Padding_Size_12"
+                android:src="@drawable/ic_baseline_edit_24"
+                app:layout_constraintBottom_toBottomOf="@+id/tvAwayWrite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvAwayWrite" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvSchedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/Padding_Size_16"
+            android:layout_marginVertical="@dimen/Padding_Size_32"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Schedule"
+            android:textColor="@color/black"
+            android:textSize="@dimen/Padding_Size_14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lay1" />
+
+        <TextView
+            android:id="@+id/tvScheduleSub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/Padding_Size_16"
+            android:fontFamily="@font/roboto"
+            android:text="Always send"
+            android:textColor="@color/black"
+            android:textSize="@dimen/Padding_Size_12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSchedule" />
+
+        <TextView
+            android:id="@+id/tvRecipients"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/Padding_Size_16"
+            android:layout_marginVertical="@dimen/Padding_Size_32"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Recipients"
+            android:textColor="@color/black"
+            android:textSize="@dimen/Padding_Size_14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvScheduleSub" />
+
+        <TextView
+            android:id="@+id/tvRecipientsSub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/Padding_Size_16"
+            android:fontFamily="@font/roboto"
+            android:text="Send to everyone"
+            android:textColor="@color/black"
+            android:textSize="@dimen/Padding_Size_12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRecipients" />
+
+        <View
+            android:id="@+id/view15"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="@dimen/Padding_Size_16"
+            android:background="@color/gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRecipientsSub" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/Padding_Size_16"
+            android:layout_marginVertical="@dimen/Padding_Size_24"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto"
+            android:text="Away message are only sent when the phone has an activity internet connection\nlearn More"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view15" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
