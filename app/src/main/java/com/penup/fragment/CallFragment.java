@@ -134,7 +134,6 @@ MissedCallListAdapter adapter;
             @Override
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int i) {
 
-
                 final int position = viewHolder.getAdapterPosition();
                 final String item = adapter.getData().get(position);
                 adapter.removeItem(position);
